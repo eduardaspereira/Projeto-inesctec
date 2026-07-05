@@ -1,0 +1,190 @@
+{
+    "frames": [
+        {
+            "frame_id": 0,
+            "timestamp_s": 0.0,
+            "filename": "frame_0000.png",
+            "imu_ref_idx": 0
+        },
+        {
+            "frame_id": 1,
+            "timestamp_s": 0.333,
+            "filename": "frame_0001.png",
+            "imu_ref_idx": 33
+        },
+        {
+            "frame_id": 2,
+            "timestamp_s": 0.667,
+            "filename": "frame_0002.png",
+            "imu_ref_idx": 66
+        },
+        {
+            "frame_id": 3,
+            "timestamp_s": 1.0,
+            "filename": "frame_0003.png",
+            "imu_ref_idx": 100
+        },
+        {
+            "frame_id": 4,
+            "timestamp_s": 1.333,
+            "filename": "frame_0004.png",
+            "imu_ref_idx": 133
+        },
+        {
+            "frame_id": 5,
+            "timestamp_s": 1.667,
+            "filename": "frame_0005.png",
+            "imu_ref_idx": 166
+        },
+        {
+            "frame_id": 6,
+            "timestamp_s": 2.0,
+            "filename": "frame_0006.png",
+            "imu_ref_idx": 200
+        },
+        {
+            "frame_id": 7,
+            "timestamp_s": 2.333,
+            "filename": "frame_0007.png",
+            "imu_ref_idx": 233
+        },
+        {
+            "frame_id": 8,
+            "timestamp_s": 2.667,
+            "filename": "frame_0008.png",
+            "imu_ref_idx": 266
+        },
+        {
+            "frame_id": 9,
+            "timestamp_s": 3.0,
+            "filename": "frame_0009.png",
+            "imu_ref_idx": 300
+        },
+        {
+            "frame_id": 10,
+            "timestamp_s": 3.333,
+            "filename": "frame_0010.png",
+            "imu_ref_idx": 333
+        },
+        {
+            "frame_id": 11,
+            "timestamp_s": 3.667,
+            "filename": "frame_0011.png",
+            "imu_ref_idx": 366
+        },
+        {
+            "frame_id": 12,
+            "timestamp_s": 4.0,
+            "filename": "frame_0012.png",
+            "imu_ref_idx": 400
+        },
+        {
+            "frame_id": 13,
+            "timestamp_s": 4.333,
+            "filename": "frame_0013.png",
+            "imu_ref_idx": 433
+        },
+        {
+            "frame_id": 14,
+            "timestamp_s": 4.667,
+            "filename": "frame_0014.png",
+            "imu_ref_idx": 466
+        },
+        {
+            "frame_id": 15,
+            "timestamp_s": 5.0,
+            "filename": "frame_0015.png",
+            "imu_ref_idx": 500
+        },
+        {
+            "frame_id": 16,
+            "timestamp_s": 5.333,
+            "filename": "frame_0016.png",
+            "imu_ref_idx": 533
+        },
+        {
+            "frame_id": 17,
+            "timestamp_s": 5.667,
+            "filename": "frame_0017.png",
+            "imu_ref_idx": 566
+        },
+        {
+            "frame_id": 18,
+            "timestamp_s": 6.0,
+            "filename": "frame_0018.png",
+            "imu_ref_idx": 600
+        },
+        {
+            "frame_id": 19,
+            "timestamp_s": 6.333,
+            "filename": "frame_0019.png",
+            "imu_ref_idx": 633
+        },
+        {
+            "frame_id": 20,
+            "timestamp_s": 6.667,
+            "filename": "frame_0020.png",
+            "imu_ref_idx": 666
+        },
+        {
+            "frame_id": 21,
+            "timestamp_s": 7.0,
+            "filename": "frame_0021.png",
+            "imu_ref_idx": 700
+        },
+        {
+            "frame_id": 22,
+            "timestamp_s": 7.333,
+            "filename": "frame_0022.png",
+            "imu_ref_idx": 733
+        },
+        {
+            "frame_id": 23,
+            "timestamp_s": 7.667,
+            "filename": "frame_0023.png",
+            "imu_ref_idx": 766
+        },
+        {
+            "frame_id": 24,
+            "timestamp_s": 8.0,
+            "filename": "frame_0024.png",
+            "imu_ref_idx": 800
+        },
+        {
+            "frame_id": 25,
+            "timestamp_s": 8.333,
+            "filename": "frame_0025.png",
+            "imu_ref_idx": 833
+        },
+        {
+            "frame_id": 26,
+            "timestamp_s": 8.667,
+            "filename": "frame_0026.png",
+            "imu_ref_idx": 866
+        },
+        {
+            "frame_id": 27,
+            "timestamp_s": 9.0,
+            "filename": "frame_0027.png",
+            "imu_ref_idx": 900
+        },
+        {
+            "frame_id": 28,
+            "timestamp_s": 9.333,
+            "filename": "frame_0028.png",
+            "imu_ref_idx": 933
+        },
+        {
+            "frame_id": 29,
+            "timestamp_s": 9.667,
+            "filename": "frame_0029.png",
+            "imu_ref_idx": 966
+        },
+        {
+            "frame_id": 30,
+            "timestamp_s": 10.0,
+            "filename": "frame_0030.png",
+            "imu_ref_idx": 999
+        }
+    ]
+}
