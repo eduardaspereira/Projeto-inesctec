@@ -1,0 +1,6 @@
+| Fonte de Dados | Variáveis a Manter | Variáveis Redundantes | Justificação Técnica |
+| :--- | :--- | :--- | :--- |
+| imu_data.json | Todas (acc_*, gyro_*, roll_deg, pitch_deg, yaw_deg, speed_mps, altitude_m, flight_phase) | Nenhuma | Base da física do drone. |
+| images_metadata.json | frame_id, filename, shape, imu_ref_idx | altitude_m, speed_mps, heading_deg, roll_deg, pitch_deg, flight_phase | Identical Duplication: Estes valores já existem no IMU com maior precisão temporal (IMU corre a 0.01s, a câmara a 0.333s). Para o codificador CLIP, só precisamos do filename para carregar a imagem. |
+| ran_kpms.json | rsrp_dbm, rsrq_db, sinr_db, cqi, mcs, prb_*, dl_throughput_mbps, ul_throughput_mbps, bler, latency_ms | uav_altitude_m, flight_phase, ue_x_m, ue_y_m | A altitude e a fase de voo já vêm do IMU. As coordenadas X/Y brutas dos UEs geram ruído; o que importa para a rede são as distâncias relativas (dist_3d_m, elevation_angle_deg). |
+| synthetic_port_events.csv | event_type, entity_id, entity_type, terminal, timestamp | event_id | É o ground truth logístico. O event_id (UUID longo) pode ser descartado após a ingestão para poupar largura de banda. |
