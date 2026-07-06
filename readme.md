@@ -1,4 +1,4 @@
-# notas 
+## notas 
 - quem cria gitlab 
 - fazer freeze requirements
 - ran_kpms_noise_ext.json tem dados para 120 seg e os outros 10 seg por isso estão se a repetir
@@ -6,6 +6,7 @@
 
 instalar docker: https://docs.docker.com/engine/install/ubuntu/
 
+## iniciar
 1. entrar no venv
 2. python src/clean_pipeline_data.py
 3. docker compose up -d na pasta config/
@@ -16,7 +17,7 @@ Em terminais 3 diferentes:
 6. streamlit run dashboard.py
 
 
-Dashboard streamlit -> http://localhost:8502/
+Dashboard streamlit -> http://localhost:8502/  
 ver msgs em cada tópico no kafka -> http://127.0.0.1:8080/ 
 
 
