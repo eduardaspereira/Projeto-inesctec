@@ -6,7 +6,7 @@
 
 instalar docker: https://docs.docker.com/engine/install/ubuntu/
 
-1. usei venv
+1. entrar no venv
 2. python src/clean_pipeline_data.py
 3. docker compose up -d na pasta config/
 
