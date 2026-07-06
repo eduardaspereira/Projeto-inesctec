@@ -7,14 +7,14 @@
 instalar docker: https://docs.docker.com/engine/install/ubuntu/
 
 ## iniciar
-1. entrar no venv
-2. python src/clean_pipeline_data.py
-3. docker compose up -d na pasta config/
+1. entrar no venv  
+2. python src/clean_pipeline_data.py  
+3. docker compose up -d na pasta config/  
 
-Em terminais 3 diferentes:
-4. python src/python uav_kafka_producer.py
-5. python src/cyber_physical_perception.py
-6. streamlit run dashboard.py
+Em terminais 3 diferentes:  
+4. python src/python uav_kafka_producer.py  
+5. python src/cyber_physical_perception.py  
+6. streamlit run dashboard.py  
 
 
 Dashboard streamlit -> http://localhost:8502/  
