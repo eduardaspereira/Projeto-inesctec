@@ -25,7 +25,7 @@ def helper_flatten_ran_json(ran_raw):
     
     # Colunas críticas a manter (filtrando redundâncias de altitude e coordenadas X/Y)
     columns_to_keep = [
-        'timestamp_s', 'ue_id', 'report_idx', 'dist_3d_m', 'elevation_angle_deg',
+        'timestamp_s', 'ue_id', 'ue_x_m', 'ue_y_m', 'report_idx', 'dist_3d_m', 'elevation_angle_deg',
         'rsrp_dbm', 'rsrq_db', 'sinr_db', 'cqi', 'mcs', 'prb_allocated', 
         'prb_utilisation_pct', 'dl_throughput_mbps', 'ul_throughput_mbps', 'bler', 'latency_ms'
     ]
@@ -87,6 +87,6 @@ def process_and_clean_pipeline():
 if __name__ == "__main__":
     try:
         res = process_and_clean_pipeline()
-        print("\n[Sucesso] Execução completa! O teu ambiente local de dados está pronto.")
+        print("\n[Sucesso] Execução completa.")
     except FileNotFoundError as e:
-        print(f"\n[Erro] Verifica se a tua árvore de diretórios corresponde ao caminho: {e}")
+        print(f"\n[Erro] A árvore de diretórios corresponde ao caminho: {e}")

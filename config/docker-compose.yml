@@ -80,7 +80,7 @@ services:
       - sh
       - -lc
       - |
-        python -m pip install --no-cache-dir pandas confluent-kafka && \
+        python -m pip install --no-cache-dir pandas confluent-kafka torch --extra-index-url https://download.pytorch.org/whl/cpu && \
         python src/cyber_physical_perception.py
 
   dashboard:
@@ -118,15 +118,16 @@ services:
       - kafka-init-topics
   
   vision-encoder:
-    build: 
-      context: ../src # Caminho ajustado porque o compose está na pasta config
+    build:
+      context: ..                          # Recua até à raiz do projeto para ver tudo
+      dockerfile: src/Dockerfile           # Aponta para onde o Dockerfile está guardado
     container_name: vertical_container_clip
     environment:
-      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092 # Corrigido para apontar para o serviço 'kafka'
+      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
       - IMAGES_DIR=/app/datasets/raw/uav_images/images
     volumes:
-      # Caminho ajustado com '../' para encontrar os datasets a partir da pasta config
+      # Mapeia as imagens usando a raiz como base do volume relativo
       - ../datasets/raw/uav_images/images:/app/datasets/raw/uav_images/images:ro
     depends_on:
       kafka-init-topics:
-        condition: service_completed_successfully # Espera que os tópicos sejam criados primeiro
+        condition: service_completed_successfully

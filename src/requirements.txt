@@ -4,3 +4,8 @@ torchvision==0.17.1
 transformers==4.38.2
 Pillow==10.2.0
 numpy==1.26.4
+pandas
+ftfy
+regex
+tqdm
+git+https://github.com/openai/CLIP.git

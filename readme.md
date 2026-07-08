@@ -18,8 +18,13 @@ instalar docker: https://docs.docker.com/engine/install/ubuntu/
 5. python src/cyber_physical_perception.py  
 6. streamlit run dashboard.py  
 
+docker compose restart vision-encoder
 
 Dashboard streamlit -> http://localhost:8502/  
 ver msgs em cada tópico no kafka -> http://127.0.0.1:8080/ 
 
 
+docker compose down
+docker compose up -d --build
+docker compose restart kafka-producer
+docker logs -f vertical_container_clip

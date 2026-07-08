@@ -1,91 +1,83 @@
 from __future__ import annotations
 import json
 import os
-import time
+import torch
+import torch.nn as nn
 from typing import Any
-import numpy as np # Adicionado para gestão dos embeddings
 from confluent_kafka import Consumer, KafkaError
 
+print("🧠 [Ciber-Physical Brain] A inicializar módulo de Cross-Attention (Protótipo Arquitetural)...")
+
+# --- PROTÓTIPO DA REDE NEURAL (Baseado na Literatura do NotebookLM) ---
+class CausalCrossAttentionFusion(nn.Module):
+    def __init__(self, imu_dim=6, ran_dim=6, embed_dim=16):
+        super().__init__()
+        # Projeções para alinhar as dimensões dos sensores no mesmo espaço latente
+        self.imu_proj = nn.Linear(imu_dim, embed_dim)
+        self.ran_proj = nn.Linear(ran_dim, embed_dim)
+        
+        # O mecanismo core sugerido pela literatura (Query = IMU, Key/Value = RAN)
+        self.cross_attention = nn.MultiheadAttention(embed_dim, num_heads=2, batch_first=True)
+        
+    def forward(self, imu_tensor, ran_tensor):
+        # 1. Projetar os dados crus
+        q_imu = self.imu_proj(imu_tensor).unsqueeze(1) # Query (A física do Drone)
+        k_ran = self.ran_proj(ran_tensor).unsqueeze(1) # Key (O estado do Rádio)
+        v_ran = k_ran                                  # Value
+        
+        # 2. O cruzamento causal: Onde o Pitch se cruza com o SINR
+        attn_output, attn_weights = self.cross_attention(q_imu, k_ran, v_ran)
+        return attn_output.squeeze(), attn_weights
+
+# Instanciar o modelo (Nota: Pesos estão aleatórios sem treino)
+fusion_model = CausalCrossAttentionFusion()
+
+# --- INFRAESTRUTURA KAFKA ---
 KAFKA_CONFIG = {
     "bootstrap.servers": os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9092"),
     "group.id": os.getenv("KAFKA_GROUP_ID", "cyber-physical-perception-consumer"),
     "auto.offset.reset": "earliest",
-    "enable.auto.commit": True,
 }
-
-TOPICS = ["uav.imu", "uav.ran.clean", "uav.ran.noise", "uav.camera", "tos.events"]
-
-class MultimodalGlobalState:
-    """Mantém a representação contínua do ambiente (Picture Pt) atualizada assincronamente."""
-    def __init__(self):
-        # Armazenamento das últimas percepções latentes recebidas
-        self.latest_imu = np.zeros(128)
-        self.latest_comms = np.zeros(128)
-        self.latest_vision = np.zeros(512)
-        self.last_timestamp = 0.0
-
-    def _generate_fused_picture(self) -> np.ndarray:
-        """Cria o embedding global de 768 dimensões por concatenação."""
-        return np.concatenate((self.latest_imu, self.latest_comms, self.latest_vision))
-
-    def update_modality(self, topic: str, payload: dict[str, Any]):
-        """Atualiza a modalidade específica (Trigger Mode) em vez de Matching Mode."""
-        # Nota: Na versão final, deves passar os payloads pelos encoders respetivos.
-        # Aqui simulamos a atualização do estado mediante os dados recebidos.
-        
-        if topic == "uav.imu":
-            self.last_timestamp = payload.get("timestamp_s", self.last_timestamp)
-            print(f"[Estado Global] Atualizado via IMU (100Hz) a t={self.last_timestamp}")
-            # self.latest_imu = imu_encoder(payload) 
-
-        elif topic.startswith("uav.ran"):
-            self.last_timestamp = payload.get("timestamp_s", self.last_timestamp)
-            print(f"[Estado Global] Atualizado via RAN (t={self.last_timestamp})")
-            # self.latest_comms = comms_encoder(payload)
-
-        elif topic == "uav.camera":
-            # Visão é tipicamente 1Hz
-            print(f"[Estado Global] Atualizado via Camera (1Hz) frame={payload.get('frame_id')}")
-            # self.latest_vision = clip_encoder(payload)
-            
-        elif topic == "tos.events":
-            print(f"[Estado Global] Contexto TOS recebido: {payload.get('event_type')}")
-        
-        # O estado global Pt está sempre pronto a ser lido pelas aplicações downstream
-        fused_pt = self._generate_fused_picture()
-        # Aqui poderias emitir 'fused_pt' para um tópico interno do Edge Server ou DB vetorial
-
-
-def safe_payload(raw_value: bytes) -> dict[str, Any]:
-    return json.loads(raw_value.decode("utf-8"))
+TOPICS = ["uav.imu", "uav.ran.noise"]
 
 def start_perception_bridge() -> None:
     consumer = Consumer(KAFKA_CONFIG)
     consumer.subscribe(TOPICS)
 
-    print("[Kafka consumer] Active. Waiting for independent streams to perform trigger-based fusion...")
+    print("📡 [Brain] À escuta dos tópicos. A fundir IMU e RAN via Cross-Attention...")
     
-    global_state = MultimodalGlobalState()
+    last_imu = [0.0] * 6
+    last_ran = [0.0] * 6
 
     try:
         while True:
-            msg = consumer.poll(0.01) # Reduzido para maior responsividade (assíncrono)
-
-            if msg is None:
-                continue
-            if msg.error():
-                if msg.error().code() != KafkaError._PARTITION_EOF:
-                    print(f"[Kafka consumer] error: {msg.error()}")
+            msg = consumer.poll(0.1)
+            if msg is None or msg.error():
                 continue
 
             topic = msg.topic()
-            payload = safe_payload(msg.value())
+            payload = json.loads(msg.value().decode("utf-8"))
             
-            # Delega a gestão temporal e integração para a classe de estado
-            global_state.update_modality(topic, payload)
+            # 1. Atualizar o Buffer com as grandezas físicas e de rede cruas
+            if topic == "uav.imu":
+                last_imu = [payload.get(k, 0) for k in ["altitude_m", "speed_mps", "roll_deg", "pitch_deg", "yaw_deg", "timestamp_s"]]
+            elif topic == "uav.ran.noise":
+                last_ran = [payload.get(k, 0) for k in ["sinr_db", "rsrp_dbm", "bler", "latency_ms", "ue_x_m", "ue_y_m"]]
+
+            # 2. A Magia da Fusão Neural (Apenas se tivermos ambos os dados)
+            if last_imu[0] != 0.0 and last_ran[0] != 0.0:
+                # Substitui categoricamente qualquer None por 0.0 antes de enviar para o PyTorch
+                sanitized_imu = [x if x is not None else 0.0 for x in last_imu]
+                sanitized_ran = [x if x is not None else 0.0 for x in last_ran]
+
+                t_imu = torch.tensor([sanitized_imu], dtype=torch.float32)
+                t_ran = torch.tensor([sanitized_ran], dtype=torch.float32)
+                
+                # Executa a arquitetura Cross-Attention
+                fused_latent, weights = fusion_model(t_imu, t_ran)
 
     except KeyboardInterrupt:
-        print("\n[Kafka consumer] shutting down...")
+        pass
     finally:
         consumer.close()
 

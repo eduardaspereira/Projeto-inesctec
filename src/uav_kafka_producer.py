@@ -4,8 +4,9 @@ import argparse
 import json
 import os
 import time
+import random
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 import pandas as pd
 from confluent_kafka import Producer
@@ -134,6 +135,26 @@ def delivery_report(error, message) -> None:
         print(f"[Kafka] delivery failed for {message.topic()}: {error}")
 
 
+def apply_dqdm_and_fault_injection(record: dict[str, Any], topic: str) -> dict[str, Any]:
+    # --- SOLUÇÃO 1: DQDM (Ruído Gaussiano Estocástico) ---
+    if topic == "uav.ran.noise" and record.get("sinr_db") is not None:
+        record["sinr_db"] += random.gauss(0, 0.5) 
+
+    # --- SOLUÇÃO 2: Compound Stress-Testing (Injeção Determinística) ---
+    timestamp = record.get("timestamp_s", 0)
+    # Alterado para injetar o caos a meio do voo (entre os 4s e os 8s)
+    if 4.0 <= timestamp <= 8.0:
+        if topic == "uav.imu":
+            record["pitch_deg"] = 45.0  # Força uma inclinação extrema
+        if topic == "uav.ran.noise":
+            # Usamos record.get() para evitar o erro NoneType de há bocado
+            if record.get("sinr_db") is not None:
+                record["sinr_db"] -= 15.0   # Força uma quebra drástica de sinal
+            if record.get("bler") is not None:
+                record["bler"] = 0.4        # Dispara a taxa de erro de bloco
+
+    return record
+
 def build_stream_events() -> list[dict[str, Any]]:
     events: list[dict[str, Any]] = []
 
@@ -153,6 +174,10 @@ def build_stream_events() -> list[dict[str, Any]]:
 
         for row_index, record in enumerate(rows):
             stream_time = float(record.pop("_stream_time", 0.0))
+            
+            # 🔥 Injeção aplicada aqui
+            record = apply_dqdm_and_fault_injection(record, topic)
+            
             payload = json.dumps(json_ready(record), ensure_ascii=False, separators=(",", ":"))
             events.append(
                 {
@@ -169,31 +194,48 @@ def build_stream_events() -> list[dict[str, Any]]:
     events.sort(key=lambda event: (event["stream_time"], event["dataset_order"], event["row_index"]))
     return events
 
-
-def publish_stream(producer: Producer, speedup: float) -> int:
+def publish_stream(producer: Producer, speedup: float, time_offset: float) -> float:
     events = build_stream_events()
 
     if not events:
         print("[Kafka] No processed data found to publish")
-        return 0
+        return 0.0
 
-    print(f"[Kafka] Streaming {len(events)} processed records across {len(DATASETS)} datasets")
+    print(f"[Kafka] Streaming {len(events)} records. Cycle Time Offset: +{time_offset}s")
 
     sent = 0
     last_stream_time: float | None = None
+    max_stream_time = 0.0
 
     try:
         for event in events:
             current_stream_time = float(event["stream_time"])
+            max_stream_time = max(max_stream_time, current_stream_time)
+            
             if last_stream_time is not None and speedup > 0:
                 elapsed = max(current_stream_time - last_stream_time, 0.0)
                 if elapsed > 0:
                     time.sleep(elapsed / speedup)
 
+                # --- CORREÇÃO DO TIMESTAMP ---
+                # Deserializa o payload original, atualiza o timestamp e volta a serializar
+                payload_dict = json.loads(event["payload"])
+                
+                # SAFE CHECK: Garante que a chave existe e não é None antes de somar
+                if "timestamp_s" in payload_dict and payload_dict["timestamp_s"] is not None:
+                    payload_dict["timestamp_s"] = float(payload_dict["timestamp_s"]) + time_offset
+                    
+                if "timestamp" in payload_dict and payload_dict["timestamp"] is not None:
+                    if isinstance(payload_dict["timestamp"], (int, float)):
+                        payload_dict["timestamp"] = float(payload_dict["timestamp"]) + time_offset
+
+            updated_payload = json.dumps(payload_dict, ensure_ascii=False, separators=(",", ":"))
+            # ------------------------------
+
             producer.produce(
                 topic=event["topic"],
                 key=event["key"].encode("utf-8"),
-                value=event["payload"].encode("utf-8"),
+                value=updated_payload.encode("utf-8"),
                 callback=delivery_report,
             )
             producer.poll(0.01)
@@ -206,18 +248,34 @@ def publish_stream(producer: Producer, speedup: float) -> int:
     finally:
         producer.flush()
 
-    return sent
-
-
+    # Retorna a duração deste dataset para sabermos quanto somar no próximo ciclo
+    return max_stream_time
 def run_producer(speedup: float) -> None:
     producer = Producer(KAFKA_CONFIG)
-
+    
+    print("🔄 [Kafka] A iniciar injeção CÍCLICA de dados (Workaround para Demo)...")
     try:
-        total_sent = publish_stream(producer, speedup)
-        print(f"[Kafka] Replay complete: {total_sent} messages published")
+        ciclo = 1
+        accumulated_offset = 0.0
+        
+        while True:
+            print(f"\n▶️ --- A iniciar Ciclo {ciclo} (Offset Acumulado: {accumulated_offset}s) ---")
+            
+            # publish_stream agora atualiza os dados e devolve o tempo máximo do voo
+            cycle_duration = publish_stream(producer, speedup, accumulated_offset)
+            
+            print(f"⏸️ --- Fim do Ciclo {ciclo}. A reiniciar em 3 segundos... ---")
+            producer.flush()
+            time.sleep(3)
+            
+            # O offset do próximo ciclo será o fim do ciclo atual + os 3 segundos de pausa
+            accumulated_offset += cycle_duration + 3.0
+            ciclo += 1
+            
+    except KeyboardInterrupt:
+        print("\n🛑 [Kafka] Simulador parado pelo utilizador.")
     finally:
         producer.flush()
-
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Publish the processed UAV and TOS datasets to Kafka topics.")
