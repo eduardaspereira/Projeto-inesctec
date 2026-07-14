@@ -9,3 +9,4 @@ ftfy
 regex
 tqdm
 git+https://github.com/openai/CLIP.git
+Flask==3.0.2
