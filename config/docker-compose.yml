@@ -1,133 +1,33 @@
+version: '3.8'
 services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "22181:2181"
+
   kafka:
-    image: confluentinc/cp-kafka:7.5.0
-    container_name: inesctec_kafka
-    restart: unless-stopped
+    image: confluentinc/cp-kafka:7.4.0
+    depends_on:
+      - zookeeper
     ports:
-      - "9092:9092"
-    healthcheck:
-      test: ["CMD-SHELL", "kafka-topics --bootstrap-server localhost:9092 --list > /dev/null 2>&1"]
-      interval: 10s
-      timeout: 5s
-      retries: 12
-      start_period: 20s
+      - "29092:29092"
     environment:
-      KAFKA_NODE_ID: 1
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,INTERNAL:PLAINTEXT,EXTERNAL:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: INTERNAL://kafka:29092,EXTERNAL://localhost:9092
-      KAFKA_LISTENERS: INTERNAL://0.0.0.0:29092,EXTERNAL://0.0.0.0:9092,CONTROLLER://0.0.0.0:19092
-      KAFKA_INTER_BROKER_LISTENER_NAME: INTERNAL
-      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
-      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
-      KAFKA_PROCESS_ROLES: broker,controller
-      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:19092
-      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-      CLUSTER_ID: MkU3OEVBNTcwNTJENDM2Qk
-
-  kafka-init-topics:
-    image: confluentinc/cp-kafka:7.5.0
-    container_name: inesctec_kafka_init
-    depends_on:
-      kafka:
-        condition: service_healthy
-    restart: "no"
-    command:
-      - bash
-      - -lc
-      - |
-        set -e
-        topics=(uav.imu uav.ran.clean uav.ran.noise uav.camera tos.events)
-        for topic in "$${topics[@]}"; do
-          kafka-topics --bootstrap-server kafka:29092 --create --if-not-exists --topic "$$topic" --partitions 1 --replication-factor 1
-        done
-
-  kafka-producer:
-    image: python:3.11-slim
-    container_name: inesctec_kafka_producer
-    depends_on:
-      kafka-init-topics:
-        condition: service_completed_successfully
-    restart: "no"
-    working_dir: /workspace
-    volumes:
-      - ..:/workspace
-    environment:
-      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
-    command:
-      - sh
-      - -lc
-      - |
-        python -m pip install --no-cache-dir pandas confluent-kafka && \
-        python src/uav_kafka_producer.py --speedup 20
-
-  kafka-consumer:
-    image: python:3.11-slim
-    container_name: inesctec_kafka_consumer
-    depends_on:
-      kafka-init-topics:
-        condition: service_completed_successfully
-    restart: unless-stopped
-    working_dir: /workspace
-    volumes:
-      - ..:/workspace
-    environment:
-      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
-    command:
-      - sh
-      - -lc
-      - |
-        python -m pip install --no-cache-dir pandas confluent-kafka torch --extra-index-url https://download.pytorch.org/whl/cpu && \
-        python src/cyber_physical_perception.py
-
-  dashboard:
-    image: python:3.11-slim
-    container_name: inesctec_streamlit_dashboard
-    depends_on:
-      kafka-init-topics:
-        condition: service_completed_successfully
-    restart: unless-stopped
-    working_dir: /workspace
-    volumes:
-      - ..:/workspace
-    ports:
-      - "8501:8501"
-    environment:
-      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
-    command:
-      - sh
-      - -lc
-      - |
-        python -m pip install --no-cache-dir streamlit pandas confluent-kafka && \
-        streamlit run src/dashboard.py --server.address 0.0.0.0 --server.port 8501
 
   kafka-ui:
     image: provectuslabs/kafka-ui:latest
-    container_name: kafka-ui
-    restart: unless-stopped
     ports:
       - "8080:8080"
     environment:
-      KAFKA_CLUSTERS_0_NAME: local
+      KAFKA_CLUSTERS_0_NAME: ambiente_local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:29092
     depends_on:
       - kafka
-      - kafka-init-topics
-  
-  vision-encoder:
-    build:
-      context: ..                          # Recua até à raiz do projeto para ver tudo
-      dockerfile: src/Dockerfile           # Aponta para onde o Dockerfile está guardado
-    container_name: vertical_container_clip
-    environment:
-      - KAFKA_BOOTSTRAP_SERVERS=kafka:29092
-      - IMAGES_DIR=/app/datasets/raw/uav_images/images
-    volumes:
-      # Mapeia as imagens usando a raiz como base do volume relativo
-      - ../datasets/raw/uav_images/images:/app/datasets/raw/uav_images/images:ro
-    depends_on:
-      kafka-init-topics:
-        condition: service_completed_successfully
