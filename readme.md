@@ -67,7 +67,17 @@ B: T3
 docker exec -it $(docker ps -qf "name=kafka") kafka-console-consumer --bootstrap-server localhost:29092 --topic NC_topic --from-beginning
 
 
+==============================================
+# Criar o VC_topic
+docker exec -it cd14435d8738 kafka-topics --create --topic VC_topic --bootstrap-server localhost:29092 --partitions 1 --replication-factor 1
+
+# Criar o NC_topic
+docker exec -it cd14435d8738 kafka-topics --create --topic NC_topic --bootstrap-server localhost:29092 --partitions 1 --replication-factor 1
 
 ===============================================
-- Image Perception Agent:  CLIP (ViT-B/32) para processar as imagens e gerar o embedding de 512 dimensões. 
-- NLP Perception Agent (e IMU): O pipeline está preparado para eles e a fusão está a acontecer corretamente, mas lembra-te que no código usámos as funções mock_nlp_embedding e mock_imu_embedding (que geram valores aleatórios) apenas para testar a ligação. Para o sistema ser real, teríamos de substituir esse mock por um modelo leve de texto (como um pequeno BERT) para interpretar os eventos do TOS, e pela rede neuronal feed-forward que referiste nos apontamentos para o IMU.  
+Network Container:
+1. Consumir a mensagem do tópico NC_topic.
+2. Descomprimir o vetor: Usando a fórmula matemática inversa da quantização: Valor_{Float} = (Valor_{INT8} + 128) * scale + min_val
+3. Avaliar o Espaço Latente: terá um algoritmo (provavelmente Reinforcement Learning ou um simples classificador Pytorch/SciKit) que aprendeu que, por exemplo, se a dimensão [4] do vetor for positiva e a dimensão [10] for muito negativa, isso significa "Vento Forte e Contentor em Queda".
+4. Atuar na Rede: Com base nessa avaliação, o NC vai comunicar com a arquitetura O-RAN para alocar mais largura de banda (eMBB) para o vídeo ou priorizar latência (URLLC) para comandos de emergência.
+O modelo preditivo do NC lê essa matemática e prevê o futuro.
