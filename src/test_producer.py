@@ -63,7 +63,7 @@ def main():
         }
         
         if current_time_s in images_by_time:
-            vc_payload["image_frame"] = f"../datasets/raw/uav_images/{images_by_time[current_time_s]['filename']}"
+            vc_payload["image_frame"] = f"../datasets/raw/uav_images/dataset_sintetico/{images_by_time[current_time_s]['filename']}"
             
         if current_time_s % 0.5 == 0 and tos_index < len(tos_events):
             vc_payload["tos_data"] = tos_events[tos_index]
