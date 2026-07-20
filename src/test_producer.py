@@ -53,11 +53,13 @@ def main():
             
         current_time_s = round(float(row["timestamp_s"]), 2)
         
+        # O Payload base passa a incluir as metricas de rede (RAN)
         vc_payload = {
             "timestamp": current_time_s,
             "imu_data": row,
             "image_frame": None,
-            "tos_data": None
+            "tos_data": None,
+            "ran_metrics": None
         }
         
         if current_time_s in images_by_time:
@@ -67,25 +69,19 @@ def main():
             vc_payload["tos_data"] = tos_events[tos_index]
             tos_index += 1
             
+        # Anexar as metricas de rede se existirem para este milissegundo
+        if current_time_s in ran_by_time:
+            vc_payload["ran_metrics"] = ran_by_time[current_time_s]
+            
+        # O Produtor emite apenas para o VC_topic
         producer.produce(
             'VC_topic',
             key=str(current_time_s),
             value=json.dumps(vc_payload),
             callback=delivery_report
         )
-        
-        # Isolamento: As metricas RAN sao publicadas para consumo exclusivo do NC noutro contexto
-        if current_time_s in ran_by_time:
-            producer.produce(
-                'RAN_topic', 
-                key=str(current_time_s),
-                value=json.dumps(ran_by_time[current_time_s]),
-                callback=delivery_report
-            )
             
         producer.poll(0) 
-        
-        # Preservacao da cadencia cronologica da amostra (aprox. 100Hz)
         time.sleep(0.01)
 
     producer.flush()

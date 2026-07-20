@@ -39,3 +39,7 @@ usa pkl antigo?
 pkl está a ser publicado no NC_topic?
 treinar rede neural no colab
 o test_producer.py está a enviar alternadamente para  os tópicos ou está a enviar por ordem? 
+
+
+
+prever qnt tempo ao ritmo 

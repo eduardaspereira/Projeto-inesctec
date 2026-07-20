@@ -11,8 +11,11 @@ from sklearn.decomposition import PCA
 from confluent_kafka import Consumer, Producer
 from collections import deque
 
+# Importacao dos peritos de IA (Obrigatorio ter o ficheiro perception_agents.py na mesma pasta)
+from perception_agents import ImagePerceptionAgent, NLPAgent
+
 # =========================================================
-# 1. Configuracao de Hardware e Modelos
+# 1. Configuracao de Hardware, Modelos e Agentes
 # =========================================================
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f"[Inicializacao] Vertical Container alocado no dispositivo: {device.upper()}")
@@ -65,6 +68,10 @@ except FileNotFoundError:
 except RuntimeError as e:
     print(f"[Erro] Incompatibilidade arquitetural nos pesos do IMU. Detalhe: {e}")
     exit(1)
+
+print("[Inicializacao] A instanciar Agentes Peritos (Visao Computacional e NLP)...")
+image_agent = ImagePerceptionAgent(history_size=10)
+nlp_agent = NLPAgent()
 
 # Configuracao Temporal e Dimensional
 WINDOW_SIZE = 50
@@ -132,8 +139,7 @@ def process_imu_window(buffer):
     gyro_roll = np.array([float(row.get('gyro_roll', 0)) for row in buffer])
     altitude = np.array([float(row.get('altitude_m', 0)) for row in buffer])
 
-    # Detecao Local de Anomalias (Flag CRITICAL_ANOMALY)
-    # Limiar arbitrario para a literatura, avaliando variancia severa em aceleracao Z (ex: queda livre ou impacto)
+    # Detecao Local de Anomalias
     acc_z_std = float(np.std(acc_z))
     is_anomalous = acc_z_std > 3.0 
 
@@ -184,7 +190,7 @@ try:
         payload = json.loads(msg.value().decode('utf-8'))
         timestamp = payload.get("timestamp")
         
-        # Gestao de Falhas - Limpeza de Buffer em caso de interrupcao do sinal
+        # Gestao de Falhas - Limpeza de Buffer
         if last_timestamp is not None and (timestamp - last_timestamp) > 1.0:
             imu_buffer.clear()
             print(f"[{timestamp}s] [Aviso] Descontinuidade temporal detetada. Buffer cinemático limpo.")
@@ -194,35 +200,39 @@ try:
         if imu_data_raw:
             imu_buffer.append(imu_data_raw)
             
-        img_emb = extract_image_embedding(payload.get("image_frame"))
-        nlp_emb = extract_nlp_embedding(payload.get("tos_data"))
+        img_path = payload.get("image_frame")
+        tos_data = payload.get("tos_data")
+        raw_ran = payload.get("ran_metrics")
+        
+        # 1. Extracao Multimodal Base (O que vai para o Espaco Latente)
+        img_emb = extract_image_embedding(img_path)
+        nlp_emb = extract_nlp_embedding(tos_data)
         imu_emb, is_anomalous = process_imu_window(imu_buffer)
 
-        if payload.get("image_frame") or payload.get("tos_data"):
-            print(f"[{timestamp}s] [Processamento] Agregacao Multimodal Ativa.")
+        if img_path or tos_data or raw_ran:
             
+            # 2. Fusao e Calibracao PCA
             fused_vector = np.concatenate((img_emb, imu_emb, nlp_emb))
             
-            # Calibracao de Base Real do PCA (Eliminacao de Mock Data)
             if not pca_is_fitted:
                 calibration_buffer.append(fused_vector)
                 if len(calibration_buffer) >= CALIBRATION_SAMPLES:
                     pca_reducer.fit(calibration_buffer)
                     pca_is_fitted = True
-                    joblib.dump(pca_reducer, 'pca_reducer.pkl')
+                    # Caminho absoluto para garantir que o NC o encontra
+                    joblib.dump(pca_reducer, os.path.abspath('pca_reducer.pkl'))
                     print("[Sistema] Matriz PCA calibrada de forma autonoma com dados reais do terreno.")
                 else:
-                    # Nao emite output enquanto o PCA nao estiver fiavelmente calibrado
                     continue
 
             reduced_vector = pca_reducer.transform([fused_vector])[0]
             quantized_vector, scale, min_val = quantize_to_int8(reduced_vector)
 
-            # Exportacao Continua para Auditoria Visual (TensorBoard)
+            # Exportacao Continua para Auditoria (SOTA)
             with open("tensors.tsv", "a") as f_vec:
                 f_vec.write("\t".join(map(str, reduced_vector)) + "\n")
             
-            tos_event = payload.get("tos_data", {}).get("event_type", "NOMINAL") if payload.get("tos_data") else "NOMINAL"
+            tos_event = tos_data.get("event_type", "NOMINAL") if tos_data else "NOMINAL"
             
             if not os.path.exists("metadata.tsv") or os.stat("metadata.tsv").st_size == 0:
                 with open("metadata.tsv", "w") as f_meta:
@@ -231,19 +241,60 @@ try:
             with open("metadata.tsv", "a") as f_meta:
                 f_meta.write(f"{timestamp}\t{tos_event}\n")
             
-            # Avaliacao Previa de Estado (Aviso SOTA)
             current_status = "CRITICAL_ANOMALY" if is_anomalous else "TRACKING_ACTIVE"
             if current_status == "CRITICAL_ANOMALY":
                 print(f"[{timestamp}s] [Alerta] Anomalia Cinematica Severa Detetada na Fase de Extracao.")
 
+            # 3. Intervencao dos Agentes Peritos (Calculo Geometrico e de Texto)
+            image_prediction = image_agent.analyze_frame(img_path)
+            nlp_prediction = nlp_agent.analyze_text(tos_data)
+
+            time_to_drop = image_prediction.get("time_to_block_s", -1.0)
+            
+            if 0.0 <= time_to_drop <= 3.0:
+                connection_estimate = "CRITICAL"
+            else:
+                connection_estimate = "LESS_CRITICAL"
+
+            # 4. Estruturar Metricas RAN
+            formatted_ran = None
+            if raw_ran:
+                formatted_ran = {
+                    "timestamp_s": raw_ran.get("timestamp_s"),
+                    "report_idx": raw_ran.get("report_idx"),
+                    "rsrp_dbm": raw_ran.get("rsrp_dbm"),
+                    "rsrq_db": raw_ran.get("rsrq_db"),
+                    "sinr_db": raw_ran.get("sinr_db"),
+                    "cqi": raw_ran.get("cqi"),
+                    "mcs": raw_ran.get("mcs"),
+                    "prb_allocated": raw_ran.get("prb_allocated"),
+                    "prb_utilisation_pct": raw_ran.get("prb_utilisation_pct"),
+                    "dl_throughput_mbps": raw_ran.get("dl_throughput_mbps"),
+                    "ul_throughput_mbps": raw_ran.get("ul_throughput_mbps"),
+                    "bler": raw_ran.get("bler"),
+                    "latency_ms": raw_ran.get("latency_ms")
+                }
+
+            # 5. Payload Unificado Final (Edge Gateway)
             nc_payload = {
                 "timestamp": timestamp,
                 "obstacle_state_vector": quantized_vector.tolist(),
                 "quantization_params": {"scale": scale, "min_val": min_val},
-                "status": current_status
+                "status": current_status,
+                "ran_metrics": formatted_ran,
+                "agent_insights": {
+                    "is_los_blocked": image_prediction.get("los_blocked_now", False),
+                    "predicted_time_to_drop_s": time_to_drop,
+                    "connection_estimate": connection_estimate, # <--- AQUI ESTA A FLAG
+                    "nlp_threat_detected": nlp_prediction.get("imminent_threat", False)
+                }
             }
+            
             producer.produce('NC_topic', key=str(timestamp), value=json.dumps(nc_payload), callback=delivery_report)
             producer.poll(0)
+            
+            if img_path or tos_data:
+                 print(f"[{timestamp}s] [Gateway] Fusao Ativa | Estimativa de Ligacao: {connection_estimate} (Drop em {time_to_drop}s)")
 
 except KeyboardInterrupt:
     print("\n[Sistema] Termino da execucao pelo utilizador. A encerrar instancias...")

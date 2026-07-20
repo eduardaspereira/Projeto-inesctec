@@ -1,9 +1,0 @@
-{
-  "timestamp": 6.34,
-  "obstacle_state_vector": [-128, 54, 12, -89, 4, 112], 
-  "quantization_params": {
-    "scale": 0.0431, 
-    "min_val": -5.1
-  },
-  "status": "TRACKING_ACTIVE"
-}
