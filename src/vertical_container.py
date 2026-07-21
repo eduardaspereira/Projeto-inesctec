@@ -10,8 +10,6 @@ from sentence_transformers import SentenceTransformer
 from sklearn.decomposition import PCA
 from confluent_kafka import Consumer, Producer
 from collections import deque
-
-# Importacao dos peritos de IA (Obrigatorio ter o ficheiro perception_agents.py na mesma pasta)
 from perception_agents import ImagePerceptionAgent, NLPAgent
 
 # =========================================================
@@ -204,7 +202,7 @@ try:
         tos_data = payload.get("tos_data")
         raw_ran = payload.get("ran_metrics")
         
-        # 1. Extracao Multimodal Base (O que vai para o Espaco Latente)
+        # 1. Extracao Multimodal Base 
         img_emb = extract_image_embedding(img_path)
         nlp_emb = extract_nlp_embedding(tos_data)
         imu_emb, is_anomalous = process_imu_window(imu_buffer)

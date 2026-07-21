@@ -85,7 +85,7 @@ def main():
         producer.poll(0)
         mensagens_enviadas += 1
         
-        # Simular a cadência de rede (ajusta o sleep se quiseres emitir mais rápido/lento)
+        # Simular a cadência de rede
         time.sleep(1)
 
     # Garantir que todas as mensagens na fila são enviadas antes de fechar

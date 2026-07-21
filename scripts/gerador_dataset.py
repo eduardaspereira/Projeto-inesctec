@@ -73,7 +73,7 @@ def gerar_dataset_318(num_frames=318, num_ues=3, pasta_saida="../datasets/raw/ua
     with open(os.path.join(pasta_saida, "images_metadata.json"), "w") as f:
         json.dump(metadados, f, indent=4)
         
-    print(f"[Gerador] Concluído! 318 frames guardados em: ./{pasta_saida}/")
+    print(f"[Gerador] Concluído! Frames guardados em: ./{pasta_saida}/")
 
 if __name__ == "__main__":
     gerar_dataset_318()

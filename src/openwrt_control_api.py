@@ -17,7 +17,7 @@ AP_STATE = {
 @app.route('/api/status', methods=['GET'])
 def get_status():
     """Retorna o estado atual das métricas e configurações do Wireless AP."""
-    print("📡 [OpenWrt API]: Pedido de status recebido pelo Orquestrador.")
+    print("[OpenWrt API]: Pedido de status recebido pelo Orquestrador.")
     return jsonify(AP_STATE), 200
 
 @app.route('/api/set_bandwidth', methods=['POST'])
@@ -31,8 +31,8 @@ def set_bandwidth():
         AP_STATE["connected_ues"][ue_id]["allocated_bandwidth_mbps"] = bandwidth
         
         # Aqui simulamos o comando UCI real que vais correr via SSH no teu Archer C50
-        print(f"\n⚡ [UCI COMMAND EXECUTED] -> uci set wireless.{AP_STATE['interface']}.max_rate={bandwidth}m && uci commit")
-        print(f"⚖️ [OpenWrt AP]: Tráfego moldado. {ue_id} limitado a {bandwidth} Mbps.")
+        print(f"\n[UCI COMMAND EXECUTED] -> uci set wireless.{AP_STATE['interface']}.max_rate={bandwidth}m && uci commit")
+        print(f"[OpenWrt AP]: Tráfego moldado. {ue_id} limitado a {bandwidth} Mbps.")
         
         return jsonify({"status": "success", "message": f"Bandwidth updated for {ue_id}"}), 200
     return jsonify({"status": "error", "message": "UE not found"}), 404
@@ -48,13 +48,13 @@ def force_roaming():
         del AP_STATE["connected_ues"][ue_id]
         
         # Aqui simulamos o comando UBUS real do OpenWrt para escorraçar um cliente rádio
-        print(f"\n💥 [UBUS COMMAND EXECUTED] -> ubus call hostapd.{AP_STATE['interface']} del_client '{{\"addr\":\"{mac}\", \"reason\":1, \"deauth\":true}}'")
-        print(f"🚪 [OpenWrt AP]: {ue_id} ({mac}) foi desconectado via hardware para forçar Roaming.")
+        print(f"\n[UBUS COMMAND EXECUTED] -> ubus call hostapd.{AP_STATE['interface']} del_client '{{\"addr\":\"{mac}\", \"reason\":1, \"deauth\":true}}'")
+        print(f"[OpenWrt AP]: {ue_id} ({mac}) foi desconectado via hardware para forçar Roaming.")
         
         return jsonify({"status": "success", "message": f"Forced roaming executed for {ue_id}"}), 200
     return jsonify({"status": "error", "message": "UE not found"}), 404
 
 if __name__ == '__main__':
-    print("🚀 [OpenWrt Control API] A correr em http://localhost:5000")
-    print("🔒 Pronto para receber comandos de controlo rádio do Cérebro de IA...")
+    print("[OpenWrt Control API] A correr em http://localhost:5000")
+    print("Pronto para receber comandos de controlo rádio...")
     app.run(host='0.0.0.0', port=5000)

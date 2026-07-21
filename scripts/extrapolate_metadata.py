@@ -1,7 +1,6 @@
 import json
 import copy
 
-# Carrega a tua estrutura base fornecida
 base_data = {
     "frames": [
         {"frame_id": 0, "timestamp_s": 0.0, "filename": "frame_0000.png", "shape": [224, 224, 3], "imu_ref_idx": 0, "altitude_m": 0.15, "speed_mps": 0.0, "heading_deg": 45.0, "roll_deg": 0.0, "pitch_deg": 8.0, "flight_phase": "takeoff", "cam_pan_x": 112, "cam_pan_y": 112},
@@ -78,9 +77,8 @@ output_data = copy.deepcopy(base_data)
 output_data["frames"] = full_frames
 output_data["metadata"]["n_frames"] = target_frames_count
 
-# Guarda o ficheiro final extrapolado
 output_filename = "images_metadata_full.json"
 with open(output_filename, "w", encoding="utf-8") as f:
     json.dump(output_data, f, indent=2)
 
-print(f"Sucesso! {target_frames_count} frames geradas e guardadas em '{output_filename}'.")
+print(f"Sucesso! {target_frames_count} frames guardados em '{output_filename}'.")
