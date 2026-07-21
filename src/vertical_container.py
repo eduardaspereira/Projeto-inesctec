@@ -230,22 +230,28 @@ try:
             with open("tensors.tsv", "a") as f_vec:
                 f_vec.write("\t".join(map(str, reduced_vector)) + "\n")
             
+            # 3. Intervencao dos Agentes (Calculo Geometrico e de Texto)
+            image_prediction = image_agent.analyze_frame(img_path)
+            nlp_prediction = nlp_agent.analyze_text(tos_data)
+
+            # =======================================================
+            # GRAVAR METADADOS 
+            # =======================================================
             tos_event = tos_data.get("event_type", "NOMINAL") if tos_data else "NOMINAL"
+            affected_ue_id = image_prediction.get("affected_ue")
+            estado_ue = f"Obstrui_{affected_ue_id}" if affected_ue_id else "Clear"
             
             if not os.path.exists("metadata.tsv") or os.stat("metadata.tsv").st_size == 0:
                 with open("metadata.tsv", "w") as f_meta:
-                    f_meta.write("Timestamp\tEvento_TOS\n")
+                    f_meta.write("Timestamp\tEvento_TOS\tEstado_UE\n")
             
             with open("metadata.tsv", "a") as f_meta:
-                f_meta.write(f"{timestamp}\t{tos_event}\n")
-            
+                f_meta.write(f"{timestamp}\t{tos_event}\t{estado_ue}\n")
+            # =======================================================
+
             current_status = "CRITICAL_ANOMALY" if is_anomalous else "TRACKING_ACTIVE"
             if current_status == "CRITICAL_ANOMALY":
-                print(f"[{timestamp}s] [Alerta] Anomalia Cinematica Severa Detetada na Fase de Extracao.")
-
-            # 3. Intervencao dos Agentes Peritos (Calculo Geometrico e de Texto)
-            image_prediction = image_agent.analyze_frame(img_path)
-            nlp_prediction = nlp_agent.analyze_text(tos_data)
+                print(f"[{timestamp}s] [Alerta] Anomalia Detetada na Fase de Extracao.")
 
             time_to_drop = image_prediction.get("time_to_block_s", -1.0)
             
@@ -283,7 +289,8 @@ try:
                 "agent_insights": {
                     "is_los_blocked": image_prediction.get("los_blocked_now", False),
                     "predicted_time_to_drop_s": time_to_drop,
-                    "connection_estimate": connection_estimate, # <--- AQUI ESTA A FLAG
+                    "affected_ue": image_prediction.get("affected_ue", None),   #UE identification
+                    "connection_estimate": connection_estimate,                 #Flag
                     "nlp_threat_detected": nlp_prediction.get("imminent_threat", False)
                 }
             }

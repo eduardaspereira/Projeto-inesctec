@@ -22,3 +22,8 @@ Network Container:
 2. Descomprimir o vetor: Usando a fórmula matemática inversa da quantização: Valor_{Float} = (Valor_{INT8} + 128) * scale + min_val
 3. Avaliar o Espaço Latente: terá um algoritmo (provavelmente Reinforcement Learning ou um simples classificador Pytorch/SciKit) que aprendeu que, por exemplo, se a dimensão [4] do vetor for positiva e a dimensão [10] for muito negativa, isso significa "Vento Forte e Contentor em Queda".
 4. Atuar na Rede: Com base nessa avaliação, o NC vai comunicar com a arquitetura O-RAN para alocar mais largura de banda (eMBB) para o vídeo ou priorizar latência (URLLC) para comandos de emergência.
+
+=====
+![Projector Embedding](docs/projector.png)
+Pontos próximos: Significa que o porto está num estado praticamente idêntico  
+Pontos afastados: Significa que o estado da rede e a posição dos obstáculos mudaram drasticamente  

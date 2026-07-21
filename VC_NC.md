@@ -1,45 +1,25 @@
-# O que o VC TEM de fazer
-Extração Multimodal Paralela: Processar a imagem via CLIP (512 dims), o texto TOS via MiniLM (128 dims) e a telemetria via IMU Autoencoder (128 dims).
+1. Image Perception Agent (Vision/Camera)
+Implementado:
+- Split-Computing at the Edge: O modelo CLIP processa tudo localmente no vertical_container.py e extrai o vetor de 512 dimensões. Em nenhuma parte do código enviamos as imagens brutas (.png) para o Kafka; enviamos apenas a matriz quantizada ($\lambda_{t}=z(\zeta_{t})$).  
 
-Agregação Dinâmica do IMU: Respeitar rigidamente a janela temporal de 50 amostras e extrair as 12 características estatísticas (médias, desvios-padrão, mínimos e máximos) antes de passar pela rede.
+Sugestões: 
+- Illumination-Adaptive Modulation: simulação nevoeiro ou noite
+- Safety-Critical Region Masking: O CLIP analisa a imagem inteira. Como otimização futura, podemos passar ao CLIP apenas o "recorte" da imagem (o crop do contentor) em vez da imagem completa de 500x500. Isso pouparia imensos ciclos de CPU/GPU na Edge.
 
-Fusão e Redução Dimensional: Concatenar os três vetores num vetor de 768 dimensões e aplicar o modelo PCA para o reduzir para exatamente 256 dimensões.
+2. NLP Perception Agent (TOS Synthetic Events)
+Implementado:
+- usamos all-MiniLM-L6-v2, a recomendação da literatura para Edge Computing.
+- Contrastive Dimensionality Reduction: A função de fusão $\mathcal{F}$ exige um alinhamento rigoroso. Tu utilizas uma camada de projeção linear (nn.Linear(384, 128)) para esmagar a saída do MiniLM e não ofuscar o Autoencoder do IMU (também de 128 dimensões).  
 
-Quantização INT8: Converter os valores flutuantes resultantes do PCA para números inteiros entre -128 e 127, capturando obrigatoriamente os valores scale e min_val.
+Sugestões:
+- Contrastive Dimensionality Reduction: ideal para treinar a projeção linear, mas a abordagem atual já garante o alinhamento matricial para as 768 dimensões totais.  
 
-Privacidade e Largura de Banda: Nunca enviar imagens (.png), textos em bruto ou telemetria nativa para o Kafka. Apenas o vetor quantizado e os parâmetros podem viajar na rede.
-
-Tolerância a Falhas: Garantir que, se a câmara falhar ou não houver evento TOS, o sistema injeta um array de zeros (e não um erro fatal), mantendo o fluxo de dados constante.
-
-# O que eleva o VC a Estado-da-Arte
-Exportação Contínua para TensorBoard: Manter a gravação em segundo plano dos ficheiros tensors.tsv e metadata.tsv para permitir auditorias visuais e provar ao júri/professores a separação de clusters do espaço latente.
-
-Aviso Prévio de Estado: Adicionar uma flag simples no JSON final (ex: "status": "CRITICAL_PROXIMITY") caso o VC detete localmente anomalias gigantescas nos sensores, alertando o NC antes mesmo da descodificação.
-
-Limpeza do Buffer: Garantir que o buffer circular (deque) do IMU é limpo corretamente caso haja uma quebra longa de ligação (para não misturar dados de voos diferentes).
-
-# O que o NC TEM de fazer
-Consumo Contínuo: Estar permanentemente subscrito ao NC_topic do Kafka e ler as mensagens à velocidade a que chegam.
-
-Descompressão Matemática Exata: Reverter obrigatoriamente a quantização usando a fórmula algébrica inversa para recuperar a precisão decimal
-
-Acumulação Histórica: O NC não pode analisar apenas a mensagem atual isolada. Tem de manter uma janela de histórico (ex: os últimos 10 ou 20 vetores) na memória para ter noção de tempo e velocidade.
-
-Decisão de Slicing da Rede: O algoritmo final do NC tem de culminar numa decisão explícita para a infraestrutura de rede (ex: pedir uma fatia de rede URLLC para latência ultra-baixa se prever uma colisão, ou eMBB para largura de banda se for um voo normal).
-
-# O que eleva o NC a Estado-da-Arte
-Previsão Sequencial (LSTM ou GRU): Em vez de usar regras fixas (IF/ELSE), treinar uma pequena rede neural recorrente (LSTM) que leia os últimos 5 segundos de vetores e consiga prever o vetor do segundo seguinte.
-
-Detenção Proativa de Bloqueio de LoS: usar a trajetória no espaço latente para prever matematicamente que o obstáculo (contentor) vai intersetar a Linha de Visada (LoS) entre a antena (AP) e o recetor (UE) antes que o sinal degrade fisicamente.
-
-Métricas de Desempenho: Medir a latência exata (em milissegundos) desde o timestamp em que tu geraste a mensagem no UAV até ao momento em que o NC tomou a decisão de rede. Isto prova a viabilidade da arquitetura na vida real.
-
-Não pode haver mock data. Não usar emojis.
-usa pkl antigo?
-pkl está a ser publicado no NC_topic?
-treinar rede neural no colab
-o test_producer.py está a enviar alternadamente para  os tópicos ou está a enviar por ordem? 
+3. The Fusion Core: Tying the Agents Together
+Implementado:
+- Asynchronous N-ODE Propagation (StreamingFlow): Usamos a abordagem Last-Known-State. Quando os dados da câmara (1Hz) demoram a chegar, o código usa a última posição conhecida enquanto o IMU (a frequências mais altas) continua a atualizar.  
 
 
+Sugestões:
+- Asynchronous N-ODE Propagation (StreamingFlow): As Neural Ordinary Differential Equations (N-ODEs) são a melhor forma matemática de modelar o tempo contínuo com chegadas irregulares de dados. No entanto, exigem uma reestruturação complexa da rede neuronal preditiva. Para a escala do projeto, o deque histórico e o bloqueio assíncrono do Kafka cumprem o requisito sem entrarem em complexidade exagerada.
 
-prever qnt tempo ao ritmo 
+- Channel-Adaptive Semantic Gating (CASM): se o parâmetro sinr_db (Signal-to-Interference-plus-Noise Ratio) ou bler (Block Error Rate) recebido indicar que a rede sem fios está caótica, o Network Controller (NC) deve desconfiar do vetor de perceção $\lambda_{t}$ que lhe chega. Matematicamente, aplica-se uma "gate" à entrada da rede LSTM, reduzindo o peso da observação se a ligação estiver altamente degradada.  

@@ -65,8 +65,9 @@ class ImagePerceptionAgent:
         ap_pos, ue_list, current_container, img = self.detect_shapes(image_path)
         
         # ========================================================
-        # AUDITORIA VISUAL (Multi-UE)
+        # Multi-UE
         # ========================================================
+        affected_ue = None
         if img is not None:
             if ap_pos:
                 cv2.rectangle(img, (ap_pos[0]-15, ap_pos[1]-15), (ap_pos[0]+15, ap_pos[1]+15), (255, 0, 0), 2)
@@ -120,16 +121,16 @@ class ImagePerceptionAgent:
                             # Guardar o pior cenário (o que falha mais rápido)
                             if t < min_time_to_block:
                                 min_time_to_block = round(t, 2)
+                                affected_ue = f"UE-{idx+1}"
 
         # Se pelo menos um estiver bloqueado agora
         if any_blocked:
-            return {"los_blocked_now": True, "time_to_block_s": 0.0}
+            return {"los_blocked_now": True, "time_to_block_s": 0.0, "affected_ue": affected_ue}
         
         # Se algum vai ser bloqueado no futuro
         if min_time_to_block != 999.0:
-            return {"los_blocked_now": False, "time_to_block_s": min_time_to_block}
-
-        return {"los_blocked_now": False, "time_to_block_s": -1.0}
+            return {"los_blocked_now": False, "time_to_block_s": min_time_to_block, "affected_ue": affected_ue}
+        return {"los_blocked_now": False, "time_to_block_s": -1.0, "affected_ue": None}
 
 class NLPAgent:
     def __init__(self):
