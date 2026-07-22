@@ -67,7 +67,7 @@ except RuntimeError as e:
     print(f"[Erro] Incompatibilidade arquitetural nos pesos do IMU. Detalhe: {e}")
     exit(1)
 
-print("[Inicializacao] A instanciar Agentes Peritos (Visao Computacional e NLP)...")
+print("[Inicializacao] A instanciar Agentes (Visao Computacional e NLP)...")
 image_agent = ImagePerceptionAgent(history_size=10)
 nlp_agent = NLPAgent()
 
@@ -120,7 +120,14 @@ def extract_nlp_embedding(tos_data):
     if not tos_data:
         return np.zeros(128)
     
-    text_event = f"{tos_data.get('event_type', '')}, {tos_data.get('entity_id', '')}, {tos_data.get('entity_type', '')}, {tos_data.get('terminal', '')}"
+    # Criar uma um percurso completo com a intenção e inércia do movimento
+    origem = tos_data.get('origin', 'Desconhecido')
+    destino = tos_data.get('terminal', 'Desconhecido')
+    peso = tos_data.get('weight_tons', '0')
+    vagoes = tos_data.get('wagons', '0')
+    evento = tos_data.get('event_type', 'N/A')
+    
+    text_event = f"Evento {evento}. Rota planeada: origem em {origem} com destino a {destino}. Inércia física: {peso} toneladas transportadas em {vagoes} vagoes."
     
     with torch.no_grad():
         emb_384 = nlp_model.encode(text_event, convert_to_tensor=True).to(device)

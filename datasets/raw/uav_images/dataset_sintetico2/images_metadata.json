@@ -1,0 +1,8272 @@
+{
+    "frames": [
+        {
+            "timestamp_s": 0.0,
+            "filename": "frame_0000.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                279,
+                273
+            ]
+        },
+        {
+            "timestamp_s": 0.1,
+            "filename": "frame_0001.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                284,
+                276
+            ]
+        },
+        {
+            "timestamp_s": 0.2,
+            "filename": "frame_0002.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                288,
+                279
+            ]
+        },
+        {
+            "timestamp_s": 0.3,
+            "filename": "frame_0003.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                293,
+                282
+            ]
+        },
+        {
+            "timestamp_s": 0.4,
+            "filename": "frame_0004.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                297,
+                285
+            ]
+        },
+        {
+            "timestamp_s": 0.5,
+            "filename": "frame_0005.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                302,
+                289
+            ]
+        },
+        {
+            "timestamp_s": 0.6,
+            "filename": "frame_0006.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                306,
+                292
+            ]
+        },
+        {
+            "timestamp_s": 0.7,
+            "filename": "frame_0007.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                311,
+                295
+            ]
+        },
+        {
+            "timestamp_s": 0.8,
+            "filename": "frame_0008.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                315,
+                298
+            ]
+        },
+        {
+            "timestamp_s": 0.9,
+            "filename": "frame_0009.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                320,
+                301
+            ]
+        },
+        {
+            "timestamp_s": 1.0,
+            "filename": "frame_0010.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                324,
+                305
+            ]
+        },
+        {
+            "timestamp_s": 1.1,
+            "filename": "frame_0011.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                329,
+                308
+            ]
+        },
+        {
+            "timestamp_s": 1.2,
+            "filename": "frame_0012.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                333,
+                311
+            ]
+        },
+        {
+            "timestamp_s": 1.3,
+            "filename": "frame_0013.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                338,
+                314
+            ]
+        },
+        {
+            "timestamp_s": 1.4,
+            "filename": "frame_0014.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                342,
+                317
+            ]
+        },
+        {
+            "timestamp_s": 1.5,
+            "filename": "frame_0015.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                347,
+                321
+            ]
+        },
+        {
+            "timestamp_s": 1.6,
+            "filename": "frame_0016.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                351,
+                324
+            ]
+        },
+        {
+            "timestamp_s": 1.7,
+            "filename": "frame_0017.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                356,
+                327
+            ]
+        },
+        {
+            "timestamp_s": 1.8,
+            "filename": "frame_0018.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                360,
+                330
+            ]
+        },
+        {
+            "timestamp_s": 1.9,
+            "filename": "frame_0019.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                365,
+                333
+            ]
+        },
+        {
+            "timestamp_s": 2.0,
+            "filename": "frame_0020.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                369,
+                337
+            ]
+        },
+        {
+            "timestamp_s": 2.1,
+            "filename": "frame_0021.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                374,
+                340
+            ]
+        },
+        {
+            "timestamp_s": 2.2,
+            "filename": "frame_0022.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                378,
+                343
+            ]
+        },
+        {
+            "timestamp_s": 2.3,
+            "filename": "frame_0023.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                383,
+                346
+            ]
+        },
+        {
+            "timestamp_s": 2.4,
+            "filename": "frame_0024.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                387,
+                349
+            ]
+        },
+        {
+            "timestamp_s": 2.5,
+            "filename": "frame_0025.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                392,
+                353
+            ]
+        },
+        {
+            "timestamp_s": 2.6,
+            "filename": "frame_0026.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                396,
+                356
+            ]
+        },
+        {
+            "timestamp_s": 2.7,
+            "filename": "frame_0027.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                401,
+                359
+            ]
+        },
+        {
+            "timestamp_s": 2.8,
+            "filename": "frame_0028.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                405,
+                362
+            ]
+        },
+        {
+            "timestamp_s": 2.9,
+            "filename": "frame_0029.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                410,
+                365
+            ]
+        },
+        {
+            "timestamp_s": 3.0,
+            "filename": "frame_0030.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                414,
+                369
+            ]
+        },
+        {
+            "timestamp_s": 3.1,
+            "filename": "frame_0031.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                419,
+                372
+            ]
+        },
+        {
+            "timestamp_s": 3.2,
+            "filename": "frame_0032.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                423,
+                375
+            ]
+        },
+        {
+            "timestamp_s": 3.3,
+            "filename": "frame_0033.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                428,
+                378
+            ]
+        },
+        {
+            "timestamp_s": 3.4,
+            "filename": "frame_0034.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                432,
+                381
+            ]
+        },
+        {
+            "timestamp_s": 3.5,
+            "filename": "frame_0035.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                437,
+                385
+            ]
+        },
+        {
+            "timestamp_s": 3.6,
+            "filename": "frame_0036.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                441,
+                388
+            ]
+        },
+        {
+            "timestamp_s": 3.7,
+            "filename": "frame_0037.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                446,
+                391
+            ]
+        },
+        {
+            "timestamp_s": 3.8,
+            "filename": "frame_0038.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                450,
+                394
+            ]
+        },
+        {
+            "timestamp_s": 3.9,
+            "filename": "frame_0039.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                455,
+                397
+            ]
+        },
+        {
+            "timestamp_s": 4.0,
+            "filename": "frame_0040.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                459,
+                401
+            ]
+        },
+        {
+            "timestamp_s": 4.1,
+            "filename": "frame_0041.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                464,
+                404
+            ]
+        },
+        {
+            "timestamp_s": 4.2,
+            "filename": "frame_0042.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                468,
+                407
+            ]
+        },
+        {
+            "timestamp_s": 4.3,
+            "filename": "frame_0043.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                473,
+                410
+            ]
+        },
+        {
+            "timestamp_s": 4.4,
+            "filename": "frame_0044.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                477,
+                413
+            ]
+        },
+        {
+            "timestamp_s": 4.5,
+            "filename": "frame_0045.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                473,
+                417
+            ]
+        },
+        {
+            "timestamp_s": 4.6,
+            "filename": "frame_0046.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                468,
+                420
+            ]
+        },
+        {
+            "timestamp_s": 4.7,
+            "filename": "frame_0047.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                464,
+                423
+            ]
+        },
+        {
+            "timestamp_s": 4.8,
+            "filename": "frame_0048.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                459,
+                426
+            ]
+        },
+        {
+            "timestamp_s": 4.9,
+            "filename": "frame_0049.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                455,
+                429
+            ]
+        },
+        {
+            "timestamp_s": 5.0,
+            "filename": "frame_0050.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                450,
+                433
+            ]
+        },
+        {
+            "timestamp_s": 5.1,
+            "filename": "frame_0051.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                446,
+                436
+            ]
+        },
+        {
+            "timestamp_s": 5.2,
+            "filename": "frame_0052.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                441,
+                439
+            ]
+        },
+        {
+            "timestamp_s": 5.3,
+            "filename": "frame_0053.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                437,
+                442
+            ]
+        },
+        {
+            "timestamp_s": 5.4,
+            "filename": "frame_0054.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                432,
+                445
+            ]
+        },
+        {
+            "timestamp_s": 5.5,
+            "filename": "frame_0055.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                428,
+                449
+            ]
+        },
+        {
+            "timestamp_s": 5.6,
+            "filename": "frame_0056.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                423,
+                452
+            ]
+        },
+        {
+            "timestamp_s": 5.7,
+            "filename": "frame_0057.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                419,
+                455
+            ]
+        },
+        {
+            "timestamp_s": 5.8,
+            "filename": "frame_0058.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                414,
+                458
+            ]
+        },
+        {
+            "timestamp_s": 5.9,
+            "filename": "frame_0059.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                410,
+                461
+            ]
+        },
+        {
+            "timestamp_s": 6.0,
+            "filename": "frame_0060.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                405,
+                465
+            ]
+        },
+        {
+            "timestamp_s": 6.1,
+            "filename": "frame_0061.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                401,
+                468
+            ]
+        },
+        {
+            "timestamp_s": 6.2,
+            "filename": "frame_0062.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                396,
+                471
+            ]
+        },
+        {
+            "timestamp_s": 6.3,
+            "filename": "frame_0063.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                392,
+                474
+            ]
+        },
+        {
+            "timestamp_s": 6.4,
+            "filename": "frame_0064.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                387,
+                477
+            ]
+        },
+        {
+            "timestamp_s": 6.5,
+            "filename": "frame_0065.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                383,
+                481
+            ]
+        },
+        {
+            "timestamp_s": 6.6,
+            "filename": "frame_0066.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                378,
+                477
+            ]
+        },
+        {
+            "timestamp_s": 6.7,
+            "filename": "frame_0067.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                374,
+                474
+            ]
+        },
+        {
+            "timestamp_s": 6.8,
+            "filename": "frame_0068.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                369,
+                471
+            ]
+        },
+        {
+            "timestamp_s": 6.9,
+            "filename": "frame_0069.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                365,
+                468
+            ]
+        },
+        {
+            "timestamp_s": 7.0,
+            "filename": "frame_0070.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                360,
+                465
+            ]
+        },
+        {
+            "timestamp_s": 7.1,
+            "filename": "frame_0071.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                356,
+                461
+            ]
+        },
+        {
+            "timestamp_s": 7.2,
+            "filename": "frame_0072.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                351,
+                458
+            ]
+        },
+        {
+            "timestamp_s": 7.3,
+            "filename": "frame_0073.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                347,
+                455
+            ]
+        },
+        {
+            "timestamp_s": 7.4,
+            "filename": "frame_0074.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                342,
+                452
+            ]
+        },
+        {
+            "timestamp_s": 7.5,
+            "filename": "frame_0075.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                338,
+                449
+            ]
+        },
+        {
+            "timestamp_s": 7.6,
+            "filename": "frame_0076.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                333,
+                445
+            ]
+        },
+        {
+            "timestamp_s": 7.7,
+            "filename": "frame_0077.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                329,
+                442
+            ]
+        },
+        {
+            "timestamp_s": 7.8,
+            "filename": "frame_0078.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                324,
+                439
+            ]
+        },
+        {
+            "timestamp_s": 7.9,
+            "filename": "frame_0079.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                320,
+                436
+            ]
+        },
+        {
+            "timestamp_s": 8.0,
+            "filename": "frame_0080.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                315,
+                433
+            ]
+        },
+        {
+            "timestamp_s": 8.1,
+            "filename": "frame_0081.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                311,
+                429
+            ]
+        },
+        {
+            "timestamp_s": 8.2,
+            "filename": "frame_0082.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                306,
+                426
+            ]
+        },
+        {
+            "timestamp_s": 8.3,
+            "filename": "frame_0083.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                302,
+                423
+            ]
+        },
+        {
+            "timestamp_s": 8.4,
+            "filename": "frame_0084.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                297,
+                420
+            ]
+        },
+        {
+            "timestamp_s": 8.5,
+            "filename": "frame_0085.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                293,
+                417
+            ]
+        },
+        {
+            "timestamp_s": 8.6,
+            "filename": "frame_0086.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                288,
+                413
+            ]
+        },
+        {
+            "timestamp_s": 8.7,
+            "filename": "frame_0087.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                284,
+                410
+            ]
+        },
+        {
+            "timestamp_s": 8.8,
+            "filename": "frame_0088.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                279,
+                407
+            ]
+        },
+        {
+            "timestamp_s": 8.9,
+            "filename": "frame_0089.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                275,
+                404
+            ]
+        },
+        {
+            "timestamp_s": 9.0,
+            "filename": "frame_0090.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                270,
+                401
+            ]
+        },
+        {
+            "timestamp_s": 9.1,
+            "filename": "frame_0091.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                266,
+                397
+            ]
+        },
+        {
+            "timestamp_s": 9.2,
+            "filename": "frame_0092.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                261,
+                394
+            ]
+        },
+        {
+            "timestamp_s": 9.3,
+            "filename": "frame_0093.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                257,
+                391
+            ]
+        },
+        {
+            "timestamp_s": 9.4,
+            "filename": "frame_0094.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                252,
+                388
+            ]
+        },
+        {
+            "timestamp_s": 9.5,
+            "filename": "frame_0095.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                248,
+                385
+            ]
+        },
+        {
+            "timestamp_s": 9.6,
+            "filename": "frame_0096.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                243,
+                381
+            ]
+        },
+        {
+            "timestamp_s": 9.7,
+            "filename": "frame_0097.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                239,
+                378
+            ]
+        },
+        {
+            "timestamp_s": 9.8,
+            "filename": "frame_0098.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                234,
+                375
+            ]
+        },
+        {
+            "timestamp_s": 9.9,
+            "filename": "frame_0099.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                230,
+                372
+            ]
+        },
+        {
+            "timestamp_s": 10.0,
+            "filename": "frame_0100.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                225,
+                369
+            ]
+        },
+        {
+            "timestamp_s": 10.1,
+            "filename": "frame_0101.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                221,
+                365
+            ]
+        },
+        {
+            "timestamp_s": 10.2,
+            "filename": "frame_0102.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                216,
+                362
+            ]
+        },
+        {
+            "timestamp_s": 10.3,
+            "filename": "frame_0103.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                212,
+                359
+            ]
+        },
+        {
+            "timestamp_s": 10.4,
+            "filename": "frame_0104.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                207,
+                356
+            ]
+        },
+        {
+            "timestamp_s": 10.5,
+            "filename": "frame_0105.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                203,
+                353
+            ]
+        },
+        {
+            "timestamp_s": 10.6,
+            "filename": "frame_0106.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                198,
+                349
+            ]
+        },
+        {
+            "timestamp_s": 10.7,
+            "filename": "frame_0107.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                194,
+                346
+            ]
+        },
+        {
+            "timestamp_s": 10.8,
+            "filename": "frame_0108.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                189,
+                343
+            ]
+        },
+        {
+            "timestamp_s": 10.9,
+            "filename": "frame_0109.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                185,
+                340
+            ]
+        },
+        {
+            "timestamp_s": 11.0,
+            "filename": "frame_0110.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                180,
+                337
+            ]
+        },
+        {
+            "timestamp_s": 11.1,
+            "filename": "frame_0111.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                176,
+                333
+            ]
+        },
+        {
+            "timestamp_s": 11.2,
+            "filename": "frame_0112.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                171,
+                330
+            ]
+        },
+        {
+            "timestamp_s": 11.3,
+            "filename": "frame_0113.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                167,
+                327
+            ]
+        },
+        {
+            "timestamp_s": 11.4,
+            "filename": "frame_0114.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                162,
+                324
+            ]
+        },
+        {
+            "timestamp_s": 11.5,
+            "filename": "frame_0115.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                158,
+                321
+            ]
+        },
+        {
+            "timestamp_s": 11.6,
+            "filename": "frame_0116.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                153,
+                317
+            ]
+        },
+        {
+            "timestamp_s": 11.7,
+            "filename": "frame_0117.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                149,
+                314
+            ]
+        },
+        {
+            "timestamp_s": 11.8,
+            "filename": "frame_0118.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                144,
+                311
+            ]
+        },
+        {
+            "timestamp_s": 11.9,
+            "filename": "frame_0119.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                140,
+                308
+            ]
+        },
+        {
+            "timestamp_s": 12.0,
+            "filename": "frame_0120.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                135,
+                305
+            ]
+        },
+        {
+            "timestamp_s": 12.1,
+            "filename": "frame_0121.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                131,
+                301
+            ]
+        },
+        {
+            "timestamp_s": 12.2,
+            "filename": "frame_0122.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                126,
+                298
+            ]
+        },
+        {
+            "timestamp_s": 12.3,
+            "filename": "frame_0123.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                122,
+                295
+            ]
+        },
+        {
+            "timestamp_s": 12.4,
+            "filename": "frame_0124.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                117,
+                292
+            ]
+        },
+        {
+            "timestamp_s": 12.5,
+            "filename": "frame_0125.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                113,
+                289
+            ]
+        },
+        {
+            "timestamp_s": 12.6,
+            "filename": "frame_0126.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                108,
+                285
+            ]
+        },
+        {
+            "timestamp_s": 12.7,
+            "filename": "frame_0127.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                104,
+                282
+            ]
+        },
+        {
+            "timestamp_s": 12.8,
+            "filename": "frame_0128.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                99,
+                279
+            ]
+        },
+        {
+            "timestamp_s": 12.9,
+            "filename": "frame_0129.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                95,
+                276
+            ]
+        },
+        {
+            "timestamp_s": 13.0,
+            "filename": "frame_0130.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                90,
+                273
+            ]
+        },
+        {
+            "timestamp_s": 13.1,
+            "filename": "frame_0131.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                86,
+                270
+            ]
+        },
+        {
+            "timestamp_s": 13.2,
+            "filename": "frame_0132.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                81,
+                266
+            ]
+        },
+        {
+            "timestamp_s": 13.3,
+            "filename": "frame_0133.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                77,
+                263
+            ]
+        },
+        {
+            "timestamp_s": 13.4,
+            "filename": "frame_0134.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                72,
+                260
+            ]
+        },
+        {
+            "timestamp_s": 13.5,
+            "filename": "frame_0135.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                68,
+                257
+            ]
+        },
+        {
+            "timestamp_s": 13.6,
+            "filename": "frame_0136.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                63,
+                254
+            ]
+        },
+        {
+            "timestamp_s": 13.7,
+            "filename": "frame_0137.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                59,
+                250
+            ]
+        },
+        {
+            "timestamp_s": 13.8,
+            "filename": "frame_0138.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                54,
+                247
+            ]
+        },
+        {
+            "timestamp_s": 13.9,
+            "filename": "frame_0139.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                50,
+                244
+            ]
+        },
+        {
+            "timestamp_s": 14.0,
+            "filename": "frame_0140.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                45,
+                241
+            ]
+        },
+        {
+            "timestamp_s": 14.1,
+            "filename": "frame_0141.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                41,
+                238
+            ]
+        },
+        {
+            "timestamp_s": 14.2,
+            "filename": "frame_0142.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                36,
+                234
+            ]
+        },
+        {
+            "timestamp_s": 14.3,
+            "filename": "frame_0143.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                32,
+                231
+            ]
+        },
+        {
+            "timestamp_s": 14.4,
+            "filename": "frame_0144.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                27,
+                228
+            ]
+        },
+        {
+            "timestamp_s": 14.5,
+            "filename": "frame_0145.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                23,
+                225
+            ]
+        },
+        {
+            "timestamp_s": 14.6,
+            "filename": "frame_0146.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                27,
+                222
+            ]
+        },
+        {
+            "timestamp_s": 14.7,
+            "filename": "frame_0147.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                32,
+                218
+            ]
+        },
+        {
+            "timestamp_s": 14.8,
+            "filename": "frame_0148.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                36,
+                215
+            ]
+        },
+        {
+            "timestamp_s": 14.9,
+            "filename": "frame_0149.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                41,
+                212
+            ]
+        },
+        {
+            "timestamp_s": 15.0,
+            "filename": "frame_0150.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                45,
+                209
+            ]
+        },
+        {
+            "timestamp_s": 15.1,
+            "filename": "frame_0151.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                50,
+                206
+            ]
+        },
+        {
+            "timestamp_s": 15.2,
+            "filename": "frame_0152.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                54,
+                202
+            ]
+        },
+        {
+            "timestamp_s": 15.3,
+            "filename": "frame_0153.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                59,
+                199
+            ]
+        },
+        {
+            "timestamp_s": 15.4,
+            "filename": "frame_0154.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                63,
+                196
+            ]
+        },
+        {
+            "timestamp_s": 15.5,
+            "filename": "frame_0155.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                68,
+                193
+            ]
+        },
+        {
+            "timestamp_s": 15.6,
+            "filename": "frame_0156.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                72,
+                190
+            ]
+        },
+        {
+            "timestamp_s": 15.7,
+            "filename": "frame_0157.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                77,
+                186
+            ]
+        },
+        {
+            "timestamp_s": 15.8,
+            "filename": "frame_0158.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                81,
+                183
+            ]
+        },
+        {
+            "timestamp_s": 15.9,
+            "filename": "frame_0159.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                86,
+                180
+            ]
+        },
+        {
+            "timestamp_s": 16.0,
+            "filename": "frame_0160.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                90,
+                177
+            ]
+        },
+        {
+            "timestamp_s": 16.1,
+            "filename": "frame_0161.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                95,
+                174
+            ]
+        },
+        {
+            "timestamp_s": 16.2,
+            "filename": "frame_0162.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                99,
+                170
+            ]
+        },
+        {
+            "timestamp_s": 16.3,
+            "filename": "frame_0163.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                104,
+                167
+            ]
+        },
+        {
+            "timestamp_s": 16.4,
+            "filename": "frame_0164.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                108,
+                164
+            ]
+        },
+        {
+            "timestamp_s": 16.5,
+            "filename": "frame_0165.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                113,
+                161
+            ]
+        },
+        {
+            "timestamp_s": 16.6,
+            "filename": "frame_0166.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                117,
+                158
+            ]
+        },
+        {
+            "timestamp_s": 16.7,
+            "filename": "frame_0167.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                122,
+                154
+            ]
+        },
+        {
+            "timestamp_s": 16.8,
+            "filename": "frame_0168.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                126,
+                151
+            ]
+        },
+        {
+            "timestamp_s": 16.9,
+            "filename": "frame_0169.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                131,
+                148
+            ]
+        },
+        {
+            "timestamp_s": 17.0,
+            "filename": "frame_0170.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                135,
+                145
+            ]
+        },
+        {
+            "timestamp_s": 17.1,
+            "filename": "frame_0171.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                140,
+                142
+            ]
+        },
+        {
+            "timestamp_s": 17.2,
+            "filename": "frame_0172.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                144,
+                138
+            ]
+        },
+        {
+            "timestamp_s": 17.3,
+            "filename": "frame_0173.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                149,
+                135
+            ]
+        },
+        {
+            "timestamp_s": 17.4,
+            "filename": "frame_0174.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                153,
+                132
+            ]
+        },
+        {
+            "timestamp_s": 17.5,
+            "filename": "frame_0175.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                158,
+                129
+            ]
+        },
+        {
+            "timestamp_s": 17.6,
+            "filename": "frame_0176.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                162,
+                126
+            ]
+        },
+        {
+            "timestamp_s": 17.7,
+            "filename": "frame_0177.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                167,
+                122
+            ]
+        },
+        {
+            "timestamp_s": 17.8,
+            "filename": "frame_0178.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                171,
+                119
+            ]
+        },
+        {
+            "timestamp_s": 17.9,
+            "filename": "frame_0179.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                176,
+                116
+            ]
+        },
+        {
+            "timestamp_s": 18.0,
+            "filename": "frame_0180.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                180,
+                113
+            ]
+        },
+        {
+            "timestamp_s": 18.1,
+            "filename": "frame_0181.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                185,
+                110
+            ]
+        },
+        {
+            "timestamp_s": 18.2,
+            "filename": "frame_0182.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                189,
+                106
+            ]
+        },
+        {
+            "timestamp_s": 18.3,
+            "filename": "frame_0183.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                194,
+                103
+            ]
+        },
+        {
+            "timestamp_s": 18.4,
+            "filename": "frame_0184.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                198,
+                100
+            ]
+        },
+        {
+            "timestamp_s": 18.5,
+            "filename": "frame_0185.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                203,
+                97
+            ]
+        },
+        {
+            "timestamp_s": 18.6,
+            "filename": "frame_0186.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                207,
+                94
+            ]
+        },
+        {
+            "timestamp_s": 18.7,
+            "filename": "frame_0187.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                212,
+                90
+            ]
+        },
+        {
+            "timestamp_s": 18.8,
+            "filename": "frame_0188.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                216,
+                87
+            ]
+        },
+        {
+            "timestamp_s": 18.9,
+            "filename": "frame_0189.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                221,
+                84
+            ]
+        },
+        {
+            "timestamp_s": 19.0,
+            "filename": "frame_0190.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                225,
+                81
+            ]
+        },
+        {
+            "timestamp_s": 19.1,
+            "filename": "frame_0191.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                230,
+                78
+            ]
+        },
+        {
+            "timestamp_s": 19.2,
+            "filename": "frame_0192.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                234,
+                74
+            ]
+        },
+        {
+            "timestamp_s": 19.3,
+            "filename": "frame_0193.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                239,
+                71
+            ]
+        },
+        {
+            "timestamp_s": 19.4,
+            "filename": "frame_0194.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                243,
+                68
+            ]
+        },
+        {
+            "timestamp_s": 19.5,
+            "filename": "frame_0195.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                248,
+                65
+            ]
+        },
+        {
+            "timestamp_s": 19.6,
+            "filename": "frame_0196.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                252,
+                62
+            ]
+        },
+        {
+            "timestamp_s": 19.7,
+            "filename": "frame_0197.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                257,
+                58
+            ]
+        },
+        {
+            "timestamp_s": 19.8,
+            "filename": "frame_0198.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                261,
+                55
+            ]
+        },
+        {
+            "timestamp_s": 19.9,
+            "filename": "frame_0199.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                266,
+                52
+            ]
+        },
+        {
+            "timestamp_s": 20.0,
+            "filename": "frame_0200.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                270,
+                49
+            ]
+        },
+        {
+            "timestamp_s": 20.1,
+            "filename": "frame_0201.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                275,
+                46
+            ]
+        },
+        {
+            "timestamp_s": 20.2,
+            "filename": "frame_0202.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                279,
+                42
+            ]
+        },
+        {
+            "timestamp_s": 20.3,
+            "filename": "frame_0203.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                284,
+                39
+            ]
+        },
+        {
+            "timestamp_s": 20.4,
+            "filename": "frame_0204.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                288,
+                36
+            ]
+        },
+        {
+            "timestamp_s": 20.5,
+            "filename": "frame_0205.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                293,
+                33
+            ]
+        },
+        {
+            "timestamp_s": 20.6,
+            "filename": "frame_0206.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                297,
+                30
+            ]
+        },
+        {
+            "timestamp_s": 20.7,
+            "filename": "frame_0207.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                302,
+                26
+            ]
+        },
+        {
+            "timestamp_s": 20.8,
+            "filename": "frame_0208.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                306,
+                23
+            ]
+        },
+        {
+            "timestamp_s": 20.9,
+            "filename": "frame_0209.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                311,
+                20
+            ]
+        },
+        {
+            "timestamp_s": 21.0,
+            "filename": "frame_0210.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                315,
+                18
+            ]
+        },
+        {
+            "timestamp_s": 21.1,
+            "filename": "frame_0211.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                320,
+                20
+            ]
+        },
+        {
+            "timestamp_s": 21.2,
+            "filename": "frame_0212.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                324,
+                23
+            ]
+        },
+        {
+            "timestamp_s": 21.3,
+            "filename": "frame_0213.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                329,
+                26
+            ]
+        },
+        {
+            "timestamp_s": 21.4,
+            "filename": "frame_0214.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                333,
+                30
+            ]
+        },
+        {
+            "timestamp_s": 21.5,
+            "filename": "frame_0215.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                338,
+                33
+            ]
+        },
+        {
+            "timestamp_s": 21.6,
+            "filename": "frame_0216.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                342,
+                36
+            ]
+        },
+        {
+            "timestamp_s": 21.7,
+            "filename": "frame_0217.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                347,
+                39
+            ]
+        },
+        {
+            "timestamp_s": 21.8,
+            "filename": "frame_0218.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                351,
+                42
+            ]
+        },
+        {
+            "timestamp_s": 21.9,
+            "filename": "frame_0219.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                356,
+                46
+            ]
+        },
+        {
+            "timestamp_s": 22.0,
+            "filename": "frame_0220.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                360,
+                49
+            ]
+        },
+        {
+            "timestamp_s": 22.1,
+            "filename": "frame_0221.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                365,
+                52
+            ]
+        },
+        {
+            "timestamp_s": 22.2,
+            "filename": "frame_0222.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                369,
+                55
+            ]
+        },
+        {
+            "timestamp_s": 22.3,
+            "filename": "frame_0223.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                374,
+                58
+            ]
+        },
+        {
+            "timestamp_s": 22.4,
+            "filename": "frame_0224.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                378,
+                62
+            ]
+        },
+        {
+            "timestamp_s": 22.5,
+            "filename": "frame_0225.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                383,
+                65
+            ]
+        },
+        {
+            "timestamp_s": 22.6,
+            "filename": "frame_0226.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                387,
+                68
+            ]
+        },
+        {
+            "timestamp_s": 22.7,
+            "filename": "frame_0227.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                392,
+                71
+            ]
+        },
+        {
+            "timestamp_s": 22.8,
+            "filename": "frame_0228.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                396,
+                74
+            ]
+        },
+        {
+            "timestamp_s": 22.9,
+            "filename": "frame_0229.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                401,
+                78
+            ]
+        },
+        {
+            "timestamp_s": 23.0,
+            "filename": "frame_0230.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                405,
+                81
+            ]
+        },
+        {
+            "timestamp_s": 23.1,
+            "filename": "frame_0231.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                410,
+                84
+            ]
+        },
+        {
+            "timestamp_s": 23.2,
+            "filename": "frame_0232.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                414,
+                87
+            ]
+        },
+        {
+            "timestamp_s": 23.3,
+            "filename": "frame_0233.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                419,
+                90
+            ]
+        },
+        {
+            "timestamp_s": 23.4,
+            "filename": "frame_0234.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                423,
+                94
+            ]
+        },
+        {
+            "timestamp_s": 23.5,
+            "filename": "frame_0235.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                428,
+                97
+            ]
+        },
+        {
+            "timestamp_s": 23.6,
+            "filename": "frame_0236.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                432,
+                100
+            ]
+        },
+        {
+            "timestamp_s": 23.7,
+            "filename": "frame_0237.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                437,
+                103
+            ]
+        },
+        {
+            "timestamp_s": 23.8,
+            "filename": "frame_0238.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                441,
+                106
+            ]
+        },
+        {
+            "timestamp_s": 23.9,
+            "filename": "frame_0239.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                446,
+                110
+            ]
+        },
+        {
+            "timestamp_s": 24.0,
+            "filename": "frame_0240.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                450,
+                113
+            ]
+        },
+        {
+            "timestamp_s": 24.1,
+            "filename": "frame_0241.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                455,
+                116
+            ]
+        },
+        {
+            "timestamp_s": 24.2,
+            "filename": "frame_0242.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                459,
+                119
+            ]
+        },
+        {
+            "timestamp_s": 24.3,
+            "filename": "frame_0243.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                464,
+                122
+            ]
+        },
+        {
+            "timestamp_s": 24.4,
+            "filename": "frame_0244.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                468,
+                126
+            ]
+        },
+        {
+            "timestamp_s": 24.5,
+            "filename": "frame_0245.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                473,
+                129
+            ]
+        },
+        {
+            "timestamp_s": 24.6,
+            "filename": "frame_0246.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                477,
+                132
+            ]
+        },
+        {
+            "timestamp_s": 24.7,
+            "filename": "frame_0247.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                473,
+                135
+            ]
+        },
+        {
+            "timestamp_s": 24.8,
+            "filename": "frame_0248.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                468,
+                138
+            ]
+        },
+        {
+            "timestamp_s": 24.9,
+            "filename": "frame_0249.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                464,
+                142
+            ]
+        },
+        {
+            "timestamp_s": 25.0,
+            "filename": "frame_0250.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                459,
+                145
+            ]
+        },
+        {
+            "timestamp_s": 25.1,
+            "filename": "frame_0251.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                455,
+                148
+            ]
+        },
+        {
+            "timestamp_s": 25.2,
+            "filename": "frame_0252.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                450,
+                151
+            ]
+        },
+        {
+            "timestamp_s": 25.3,
+            "filename": "frame_0253.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                446,
+                154
+            ]
+        },
+        {
+            "timestamp_s": 25.4,
+            "filename": "frame_0254.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                441,
+                158
+            ]
+        },
+        {
+            "timestamp_s": 25.5,
+            "filename": "frame_0255.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                437,
+                161
+            ]
+        },
+        {
+            "timestamp_s": 25.6,
+            "filename": "frame_0256.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                432,
+                164
+            ]
+        },
+        {
+            "timestamp_s": 25.7,
+            "filename": "frame_0257.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                428,
+                167
+            ]
+        },
+        {
+            "timestamp_s": 25.8,
+            "filename": "frame_0258.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                423,
+                170
+            ]
+        },
+        {
+            "timestamp_s": 25.9,
+            "filename": "frame_0259.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                419,
+                174
+            ]
+        },
+        {
+            "timestamp_s": 26.0,
+            "filename": "frame_0260.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                414,
+                177
+            ]
+        },
+        {
+            "timestamp_s": 26.1,
+            "filename": "frame_0261.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                410,
+                180
+            ]
+        },
+        {
+            "timestamp_s": 26.2,
+            "filename": "frame_0262.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                405,
+                183
+            ]
+        },
+        {
+            "timestamp_s": 26.3,
+            "filename": "frame_0263.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                401,
+                186
+            ]
+        },
+        {
+            "timestamp_s": 26.4,
+            "filename": "frame_0264.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                396,
+                190
+            ]
+        },
+        {
+            "timestamp_s": 26.5,
+            "filename": "frame_0265.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                392,
+                193
+            ]
+        },
+        {
+            "timestamp_s": 26.6,
+            "filename": "frame_0266.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                387,
+                196
+            ]
+        },
+        {
+            "timestamp_s": 26.7,
+            "filename": "frame_0267.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                383,
+                199
+            ]
+        },
+        {
+            "timestamp_s": 26.8,
+            "filename": "frame_0268.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                378,
+                202
+            ]
+        },
+        {
+            "timestamp_s": 26.9,
+            "filename": "frame_0269.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                374,
+                206
+            ]
+        },
+        {
+            "timestamp_s": 27.0,
+            "filename": "frame_0270.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                369,
+                209
+            ]
+        },
+        {
+            "timestamp_s": 27.1,
+            "filename": "frame_0271.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                365,
+                212
+            ]
+        },
+        {
+            "timestamp_s": 27.2,
+            "filename": "frame_0272.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                360,
+                215
+            ]
+        },
+        {
+            "timestamp_s": 27.3,
+            "filename": "frame_0273.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                356,
+                218
+            ]
+        },
+        {
+            "timestamp_s": 27.4,
+            "filename": "frame_0274.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                351,
+                222
+            ]
+        },
+        {
+            "timestamp_s": 27.5,
+            "filename": "frame_0275.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                347,
+                225
+            ]
+        },
+        {
+            "timestamp_s": 27.6,
+            "filename": "frame_0276.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                342,
+                228
+            ]
+        },
+        {
+            "timestamp_s": 27.7,
+            "filename": "frame_0277.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                338,
+                231
+            ]
+        },
+        {
+            "timestamp_s": 27.8,
+            "filename": "frame_0278.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                333,
+                234
+            ]
+        },
+        {
+            "timestamp_s": 27.9,
+            "filename": "frame_0279.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                329,
+                238
+            ]
+        },
+        {
+            "timestamp_s": 28.0,
+            "filename": "frame_0280.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                324,
+                241
+            ]
+        },
+        {
+            "timestamp_s": 28.1,
+            "filename": "frame_0281.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                320,
+                244
+            ]
+        },
+        {
+            "timestamp_s": 28.2,
+            "filename": "frame_0282.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                315,
+                247
+            ]
+        },
+        {
+            "timestamp_s": 28.3,
+            "filename": "frame_0283.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                311,
+                250
+            ]
+        },
+        {
+            "timestamp_s": 28.4,
+            "filename": "frame_0284.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                306,
+                254
+            ]
+        },
+        {
+            "timestamp_s": 28.5,
+            "filename": "frame_0285.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                302,
+                257
+            ]
+        },
+        {
+            "timestamp_s": 28.6,
+            "filename": "frame_0286.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                297,
+                260
+            ]
+        },
+        {
+            "timestamp_s": 28.7,
+            "filename": "frame_0287.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                293,
+                263
+            ]
+        },
+        {
+            "timestamp_s": 28.8,
+            "filename": "frame_0288.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                288,
+                266
+            ]
+        },
+        {
+            "timestamp_s": 28.9,
+            "filename": "frame_0289.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                284,
+                270
+            ]
+        },
+        {
+            "timestamp_s": 29.0,
+            "filename": "frame_0290.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                279,
+                273
+            ]
+        },
+        {
+            "timestamp_s": 29.1,
+            "filename": "frame_0291.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                275,
+                276
+            ]
+        },
+        {
+            "timestamp_s": 29.2,
+            "filename": "frame_0292.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                270,
+                279
+            ]
+        },
+        {
+            "timestamp_s": 29.3,
+            "filename": "frame_0293.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                266,
+                282
+            ]
+        },
+        {
+            "timestamp_s": 29.4,
+            "filename": "frame_0294.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                261,
+                285
+            ]
+        },
+        {
+            "timestamp_s": 29.5,
+            "filename": "frame_0295.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                257,
+                289
+            ]
+        },
+        {
+            "timestamp_s": 29.6,
+            "filename": "frame_0296.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                252,
+                292
+            ]
+        },
+        {
+            "timestamp_s": 29.7,
+            "filename": "frame_0297.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                248,
+                295
+            ]
+        },
+        {
+            "timestamp_s": 29.8,
+            "filename": "frame_0298.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                243,
+                298
+            ]
+        },
+        {
+            "timestamp_s": 29.9,
+            "filename": "frame_0299.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                239,
+                301
+            ]
+        },
+        {
+            "timestamp_s": 30.0,
+            "filename": "frame_0300.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                234,
+                305
+            ]
+        },
+        {
+            "timestamp_s": 30.1,
+            "filename": "frame_0301.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                230,
+                308
+            ]
+        },
+        {
+            "timestamp_s": 30.2,
+            "filename": "frame_0302.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                225,
+                311
+            ]
+        },
+        {
+            "timestamp_s": 30.3,
+            "filename": "frame_0303.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                221,
+                314
+            ]
+        },
+        {
+            "timestamp_s": 30.4,
+            "filename": "frame_0304.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                216,
+                317
+            ]
+        },
+        {
+            "timestamp_s": 30.5,
+            "filename": "frame_0305.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                212,
+                321
+            ]
+        },
+        {
+            "timestamp_s": 30.6,
+            "filename": "frame_0306.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                207,
+                324
+            ]
+        },
+        {
+            "timestamp_s": 30.7,
+            "filename": "frame_0307.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                203,
+                327
+            ]
+        },
+        {
+            "timestamp_s": 30.8,
+            "filename": "frame_0308.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                198,
+                330
+            ]
+        },
+        {
+            "timestamp_s": 30.9,
+            "filename": "frame_0309.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                194,
+                333
+            ]
+        },
+        {
+            "timestamp_s": 31.0,
+            "filename": "frame_0310.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                189,
+                337
+            ]
+        },
+        {
+            "timestamp_s": 31.1,
+            "filename": "frame_0311.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                185,
+                340
+            ]
+        },
+        {
+            "timestamp_s": 31.2,
+            "filename": "frame_0312.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                180,
+                343
+            ]
+        },
+        {
+            "timestamp_s": 31.3,
+            "filename": "frame_0313.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                176,
+                346
+            ]
+        },
+        {
+            "timestamp_s": 31.4,
+            "filename": "frame_0314.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                171,
+                349
+            ]
+        },
+        {
+            "timestamp_s": 31.5,
+            "filename": "frame_0315.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                167,
+                353
+            ]
+        },
+        {
+            "timestamp_s": 31.6,
+            "filename": "frame_0316.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                162,
+                356
+            ]
+        },
+        {
+            "timestamp_s": 31.7,
+            "filename": "frame_0317.png",
+            "ap_pos": [
+                317,
+                118
+            ],
+            "ues_pos": [
+                [
+                    375,
+                    316
+                ],
+                [
+                    99,
+                    169
+                ],
+                [
+                    434,
+                    360
+                ]
+            ],
+            "container_pos": [
+                158,
+                359
+            ]
+        }
+    ]
+}

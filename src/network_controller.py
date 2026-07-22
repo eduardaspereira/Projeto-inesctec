@@ -2,126 +2,117 @@ import json
 import numpy as np
 import torch
 import torch.nn as nn
-import joblib
-import time
-import os
-from collections import deque
 from confluent_kafka import Consumer
+from collections import deque
 
 # =========================================================
-# 1. Configuracao da Rede Neural Preditiva (LSTM)
+# 1. Arquitetura da Rede (Multi-Label Dinâmica)
 # =========================================================
-class ObstaclePredictorLSTM(nn.Module):
-    def __init__(self, input_dim=256, hidden_dim=128, num_layers=2):
+class NetworkSlicingLSTM(nn.Module):
+    # max_ues define o limite máximo de equipamentos que a rede suporta de raiz (ex: 15)
+    def __init__(self, input_dim=256, hidden_dim=128, num_layers=2, max_ues=15):
         super().__init__()
-        self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers, batch_first=True, dropout=0.1)
-        self.classifier = nn.Sequential(
-            nn.Linear(hidden_dim, 64),
-            nn.ReLU(),
-            nn.Linear(64, 1),
-            nn.Sigmoid()
-        )
-
+        self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers, batch_first=True)
+        self.dropout = nn.Dropout(0.2)
+        
+        # output genérico para até max_ues
+        self.fc = nn.Linear(hidden_dim, max_ues)
+        
     def forward(self, x):
-        _, (hidden, _) = self.lstm(x)
-        return self.classifier(hidden[-1])
+        out, _ = self.lstm(x)
+        out = out[:, -1, :] 
+        out = self.dropout(out)
+        out = self.fc(out)
+        
+        # Sigmoid avalia cada UE de 0.0 a 1.0 independentemente!
+        return torch.sigmoid(out)
 
+# =========================================================
+# 2. Configuração do Sistema
+# =========================================================
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"[Inicializacao NC] Dispositivo de inferencia alocado: {device.upper()}")
+MAX_SUPPORTED_UES = 15
+model = NetworkSlicingLSTM(max_ues=MAX_SUPPORTED_UES).to(device)
+model.eval()
 
-predictor_model = ObstaclePredictorLSTM().to(device)
-predictor_model.eval()
+SEQ_LENGTH = 15
+time_window = deque(maxlen=SEQ_LENGTH)
+THREAT_THRESHOLD = 0.75 
 
-HISTORY_STEPS = 10
-trajectory_buffer = deque(maxlen=HISTORY_STEPS)
-pca_inversor = None
+# Registo dinâmico de UEs 
+dynamic_ue_registry = {}
 
 # =========================================================
-# 2. Configuracao do Consumidor Kafka
+# 3. Consumidor Kafka (Leitura do Edge Gateway)
 # =========================================================
-consumer_conf = {
+consumer = Consumer({
     'bootstrap.servers': 'localhost:29092',
     'group.id': 'network_controller_group',
-    'auto.offset.reset': 'latest',
-    'fetch.message.max.bytes': 5242880
-}
-consumer = Consumer(consumer_conf)
+    'auto.offset.reset': 'latest'
+})
 consumer.subscribe(['NC_topic'])
 
-def dequantize_from_int8(quantized_list, scale, min_val):
-    quantized_array = np.array(quantized_list, dtype=np.int8)
-    dequantized = (quantized_array + 128) * scale + min_val
-    return dequantized.astype(np.float32)
+def dequantize_vector(quantized_list, scale, min_val):
+    arr = np.array(quantized_list, dtype=np.float32)
+    return (arr + 128) * scale + min_val
 
-print("\n[Sistema NC] Network Controller Ativo. A atuar em arquitetura Multi-Tier (RAN + Percecao)...")
+print(f"\n[NC] Sistema escalável iniciado. Suporta até {MAX_SUPPORTED_UES} UEs em simultâneo.")
+print("[NC] A escutar fluxo multimodal no 'NC_topic'...")
 
 try:
     while True:
         msg = consumer.poll(0.1)
-        
         if msg is None: continue
         if msg.error(): continue
 
         payload = json.loads(msg.value().decode('utf-8'))
-        msg_timestamp = payload.get("timestamp", 0)
-
-        # =========================================================
-        # TIER 2: Processamento Avançado Multimodal (VC)
-        # =========================================================
-        if pca_inversor is None:
-            if os.path.exists(os.path.abspath('pca_reducer.pkl')):
-                pca_inversor = joblib.load(os.path.abspath('pca_reducer.pkl'))
-                print(f"[{msg_timestamp}s] [Sistema NC] Matriz PCA recebida do Edge. Visao Multimodal destrancada.")
-            else:
-                continue
-
-        processing_start_time = time.perf_counter()
+        timestamp = payload.get("timestamp")
+        quantized_vector = payload.get("obstacle_state_vector")
+        q_params = payload.get("quantization_params", {})
         
-        # Extrair dados do payload
-        status_flag = payload.get("status")
-        agent_insights = payload.get("agent_insights", {})
-        connection_estimate = agent_insights.get("connection_estimate", "LESS_CRITICAL")
-        
-        # Extracao Segura (Tolerancia a Falhas para pacotes exclusivamente RAN)
-        obs_vector = payload.get("obstacle_state_vector")
-        quant_params = payload.get("quantization_params")
+        # O Edge diz-nos qual foi o UE afetado pela visão para podermos registá-lo dinamicamente
+        edge_affected_ue = payload.get("agent_insights", {}).get("affected_ue")
+        is_vision_critical = payload.get("agent_insights", {}).get("connection_estimate") == "CRITICAL"
 
-        if obs_vector is not None and quant_params is not None:
-            latent_256d = dequantize_from_int8(
-                obs_vector, 
-                quant_params.get("scale", 1.0), 
-                quant_params.get("min_val", 0.0)
-            )
-            trajectory_buffer.append(latent_256d)
-        else:
-            # Se for um pacote apenas de rede, ignoramos a inferencia espacial neste milissegundo
-            pass
-        
-        network_slice_decision = "eMBB" # Default
-        los_block_probability = 0.0
+        # ---------------------------------------------------------
+        # Lógica de Auto-Descoberta (Sem Hardcode)
+        # ---------------------------------------------------------
+        if edge_affected_ue and edge_affected_ue not in dynamic_ue_registry.values():
+            new_idx = len(dynamic_ue_registry)
+            if new_idx < MAX_SUPPORTED_UES:
+                dynamic_ue_registry[new_idx] = edge_affected_ue
+                print(f"[Sistema] Novo equipamento detetado e mapeado na rede: {edge_affected_ue} (Índice {new_idx})")
 
-        # Fusao de Decisoes (Network + AI Perception)
-        if status_flag == "CRITICAL_ANOMALY":
-            network_slice_decision = "URLLC"
-            print(f"[{msg_timestamp}s] [Acao Conjunta] Anomalia Cinematica do UAV. Comutacao imediata para URLLC.")
+        # ---------------------------------------------------------
+        # Processamento e Previsão
+        # ---------------------------------------------------------
+        if quantized_vector and q_params:
+            scale = q_params.get("scale", 1.0)
+            min_val = q_params.get("min_val", 0.0)
+            real_vector = dequantize_vector(quantized_vector, scale, min_val)
+            time_window.append(real_vector)
             
-        elif len(trajectory_buffer) == HISTORY_STEPS:
-            trajectory_tensor = torch.tensor(np.array(trajectory_buffer), dtype=torch.float32).unsqueeze(0).to(device)
-            
-            with torch.no_grad():
-                los_block_probability = predictor_model(trajectory_tensor).item()
+            if len(time_window) == SEQ_LENGTH:
+                seq_tensor = torch.tensor(np.array(time_window), dtype=torch.float32).unsqueeze(0).to(device)
                 
-            # Logica atualizada: Se a rede neural prever bloqueio OU a Flag do Agente for CRITICA
-            if los_block_probability > 0.75 or connection_estimate == "CRITICAL":
-                network_slice_decision = "URLLC"
+                with torch.no_grad():
+                    # Devolve um array com 'MAX_SUPPORTED_UES' probabilidades independentes
+                    risk_scores = model(seq_tensor)[0].cpu().numpy()
                 
-        processing_latency_ms = (time.perf_counter() - processing_start_time) * 1000
-        
-        if len(trajectory_buffer) == HISTORY_STEPS:
-            # Imprime a decisao final e a razao principal (se foi o Agente de Imagem a forcar a mudanca)
-            print(f"[{msg_timestamp}s] [Orquestracao E2E] Agente Visual: {connection_estimate} | RAN -> Slicing: {network_slice_decision} (Latencia NC: {processing_latency_ms:.2f}ms)")
+                # Avaliar todos os UEs registados simultaneamente
+                multiple_threats_detected = False
+                
+                for idx, ue_name in dynamic_ue_registry.items():
+                    ue_risk = risk_scores[idx]
+                    
+                    if ue_risk >= THREAT_THRESHOLD:
+                        multiple_threats_detected = True
+                        print(f"[{timestamp}s] PREDITIVO: Risco de {ue_risk*100:.1f}% para o {ue_name}! A alocar Slice URLLC para este UE...")
+
+                if is_vision_critical and not multiple_threats_detected:
+                     print(f"[{timestamp}s] REATIVO: Visão detetou perigo iminente no {edge_affected_ue}. A forçar failover!")
 
 except KeyboardInterrupt:
-    print("\n[Sistema NC] Termino da execucao pelo utilizador. A encerrar controlador...")
+    print("\n[NC] Encerramento solicitado pelo utilizador.")
 finally:
     consumer.close()
